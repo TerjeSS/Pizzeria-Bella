@@ -4,7 +4,6 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LoginIcon from "@mui/icons-material/Login";
 import { Typography } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
 import useStyles from "../../materialStyles";
 
 const Navbar = () => {

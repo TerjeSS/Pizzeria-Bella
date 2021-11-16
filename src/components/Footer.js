@@ -1,18 +1,20 @@
 import React from "react";
 import useStyles from "../materialStyles";
 import Box from "@material-ui/core/Box";
-import { Grid } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 
 const Footer = () => {
   const style = useStyles();
   return (
-    <Box>
-      <Grid container spacing={5}>
-        <Grid item xs={12} sm={4}>
-          <Box borderBottom={1}>Kontakt oss</Box>
-          <Box>hei</Box>
+    <Box className={style.footer}>
+      <Container>
+        <Grid container spacing={5}>
+          <Grid item xs={12} sm={4}>
+            <Box borderBottom={1}>Kontakt oss</Box>
+            <Box>hei</Box>
+          </Grid>
         </Grid>
-      </Grid>
+      </Container>
     </Box>
   );
 };

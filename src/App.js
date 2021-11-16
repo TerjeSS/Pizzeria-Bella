@@ -3,12 +3,12 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
 import MenuPage from "./pages/MenuPage/MenuPage";
 import Navbar from "./components/Navbar/Navbar";
-import { Container } from "@mui/material";
+import useStyles from "./materialStyles";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Container maxWidth="lg">
+    <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -16,7 +16,7 @@ function App() {
         <Route path="/menu" element={<MenuPage />} />
       </Routes>
       <Footer />
-    </Container>
+    </div>
   );
 }
 
