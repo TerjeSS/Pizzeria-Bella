@@ -1,8 +1,11 @@
+import { style } from "@mui/system";
 import React from "react";
+import useStyles from "../../materialStyles";
 
 const CheckoutPage = () => {
+  const styles = useStyles();
   return (
-    <div>
+    <div className={styles.global}>
       <h1>Checkout Page</h1>
     </div>
   );
