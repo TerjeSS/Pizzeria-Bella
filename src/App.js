@@ -10,13 +10,11 @@ function App() {
   return (
     <Container maxWidth="lg">
       <Navbar />
-
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/menu" element={<MenuPage />} />
       </Routes>
-
       <Footer />
     </Container>
   );

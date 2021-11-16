@@ -11,7 +11,7 @@ const Navbar = () => {
   const style = useStyles();
 
   return (
-    <AppBar className={style.nav}>
+    <AppBar className={style.nav} position="static">
       <Toolbar sx={{ fontSize: "12px" }}>
         <IconButton
           size="medium"

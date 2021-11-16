@@ -1,25 +1,19 @@
-import { BottomNavigation, BottomNavigationAction } from "@mui/material";
-import { Typography } from "@mui/material";
 import React from "react";
 import useStyles from "../materialStyles";
+import Box from "@material-ui/core/Box";
+import { Grid } from "@material-ui/core";
 
 const Footer = () => {
   const style = useStyles();
   return (
-    <div>
-      <BottomNavigation
-        className={style.footer}
-        showLabels
-        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-      >
-        <div>
-          <Typography variant="h5" component="h2">
-            Adresse
-          </Typography>
-          ;
-        </div>
-      </BottomNavigation>
-    </div>
+    <Box>
+      <Grid container spacing={5}>
+        <Grid item xs={12} sm={4}>
+          <Box borderBottom={1}>Kontakt oss</Box>
+          <Box>hei</Box>
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 
