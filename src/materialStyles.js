@@ -4,6 +4,7 @@ const useStyles = makeStyles({
   footer: {
     backgroundColor: "#0F2841",
     color: "#fff",
+    marginTop: "10vh",
   },
 
   nav: {

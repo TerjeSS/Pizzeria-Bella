@@ -5,6 +5,7 @@ import MenuPage from "./pages/MenuPage/MenuPage";
 import Navbar from "./components/Navbar/Navbar";
 import useStyles from "./materialStyles";
 import Footer from "./components/Footer";
+import { Container } from "@mui/material";
 
 function App() {
   return (
