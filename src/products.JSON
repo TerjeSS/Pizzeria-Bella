@@ -1,3 +1,16 @@
 {
-  "cola": [{ "price": "20kr" }]
+  "products:": [
+    {
+      "scavare": [
+        {
+          "name": "scavare",
+          "pricesmall": 160,
+          "pricelarge": 220,
+          "ingredient": ["tomat", "ost", "pepperoni"],
+          "alergies": ["hvete", "soya", "melk"],
+          "image": "pizza.png"
+        }
+      ]
+    }
+  ]
 }

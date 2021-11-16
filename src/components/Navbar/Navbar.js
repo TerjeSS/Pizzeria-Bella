@@ -7,10 +7,10 @@ import React from "react";
 import useStyles from "../../materialStyles";
 
 const Navbar = () => {
-  const style = useStyles();
+  const styles = useStyles();
 
   return (
-    <AppBar className={style.nav} position="static">
+    <AppBar className={styles.nav} position="static">
       <Toolbar sx={{ fontSize: "12px" }}>
         <IconButton
           size="medium"
