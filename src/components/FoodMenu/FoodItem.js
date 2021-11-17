@@ -35,13 +35,12 @@ const FoodItem = () => {
 			}}
 		>
 			<Grid container direction="row" style={{ width: '100%' }} alignItems="center">
-				<Grid item>
+				<Grid item xs={2}>
 					<img src={bolognese} alt="bolognese" width="45" style={{ marginRight: '5px' }} />
 				</Grid>
-				<Grid item>
+				<Grid item item xs={8.5}>
 					<Typography component="h5" variant="h5" style={{}}>
 						Bolognese
-						<FastfoodIcon edge="end" />
 					</Typography>
 					<Typography>Tomat, kjøtt, penne</Typography>
 					<Grid item style={{}}>
@@ -54,7 +53,7 @@ const FoodItem = () => {
 						</FormControl>
 					</Grid>
 				</Grid>
-				<Grid item style={{ display: 'flex', flexDirection: 'column' }}>
+				<Grid item xs={1.5} style={{ display: 'flex', flexDirection: 'column' }}>
 					<IconButton edge="end" size="large">
 						<AddShoppingCartIcon />
 					</IconButton>

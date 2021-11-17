@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles({
 	footer        : {
 		backgroundColor : '#0F2841',
-		color           : '#fff'
+		color           : '#fff',
+		position        : 'relative',
+		bottom          : '-50px'
 	},
 
 	nav           : {
