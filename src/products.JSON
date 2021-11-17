@@ -1,11 +1,47 @@
-{
+ { 
   "pizza": [
         {
-          "name": "scavare",
+          "name": "Dolce Vita",
           "priceSmall": 160,
           "priceLarge": 220,
-          "ingredients": "tomat, ost og pepperoni",
-          "allergens": "hvete, soya og melk",
+          "ingredients": "Biffstrimler, cherrytomat, avocado",
+          "allergens": "hvete",
+          "image": "pizza.png",
+          "description": "Laget med ferske tomater, og vår kjente hjemmelagde saus"
+        },
+        {
+          "name": "Figaro",
+          "priceSmall": 160,
+          "priceLarge": 220,
+          "ingredients": "Kylling, sopp, rødløk, paprika",
+          "allergens": "hvete",
+          "image": "pizza.png",
+          "description": "Laget med ferske tomater, og vår kjente hjemmelagde saus"
+        },
+        {
+          "name": "Paganini",
+          "priceSmall": 160,
+          "priceLarge": 220,
+          "ingredients": "Parmaskinke, pesto, gorgonzola",
+          "allergens": "hvete og melk",
+          "image": "pizza.png",
+          "description": "Laget med ferske tomater, og vår kjente hjemmelagde saus"
+        },
+        {
+          "name": "Fellini",
+          "priceSmall": 160,
+          "priceLarge": 220,
+          "ingredients": "Parmaskinke, cherrytomat, ruccola, parmesan",
+          "allergens": "hvete",
+          "image": "pizza.png",
+          "description": "Laget med ferske tomater, og vår kjente hjemmelagde saus"
+        },
+        {
+          "name": "Diavola",
+          "priceSmall": 160,
+          "priceLarge": 220,
+          "ingredients": "Salami, oliven, chili",
+          "allergens": "hvete",
           "image": "pizza.png",
           "description": "Laget med ferske tomater, og vår kjente hjemmelagde saus"
         }
@@ -28,6 +64,15 @@
       "image": "carbonara.png",
       "description": "Pasta Penne med langtidskokt bolognese-saus"
     },
+    {
+      "name": "Lasagne",
+      "price": 129,
+      "ingredients": "Kjøttdeig, ost, løk, hvitløk",
+      "allergens": "Hvetea",
+      "image": "carbonara.png",
+      "description": "Pasta Penne med langtidskokt bolognese-saus"
+    }
+    
   ],
   "Drikke" : [
     {
