@@ -1,22 +1,20 @@
 import React from "react";
 import { Grid } from "@mui/material";
-
+import Box from "@mui/material/Box";
+import pizza from "../../img/pizza1.jpg";
+import LandingPageStyles from "./LandingPageStyles";
+import { Container } from "@material-ui/core";
 const LandingPage = () => {
+  const styles = LandingPageStyles();
+
   return (
-    <Grid container>
-      <Grid item xs={12} sm={6} style={{ backgroundColor: "#252525" }}>
-        <item>xs=8</item>
-      </Grid>
-      <Grid item xs={12} sm={6} style={{ backgroundColor: "#ececec" }}>
-        <item>xs=4</item>
-      </Grid>
-      <Grid item xs={12} style={{ backgroundColor: "#ec2424" }}>
-        <item>xs=4</item>
-      </Grid>
-      <Grid item xs={12} style={{ backgroundColor: "#25d221" }}>
-        <item>xs=8</item>
-      </Grid>
-    </Grid>
+    <Container>
+      <Box>
+        <Box>
+          <img className={styles.img} src={pizza} alt="" />
+        </Box>
+      </Box>
+    </Container>
   );
 };
 
