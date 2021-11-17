@@ -29,6 +29,10 @@ const checkoutCardStyle = makeStyles((theme) => ({
     flexDirection: "column",
     margin: "auto",
   },
+  rowBox: {
+    display: "flex",
+    alignItems: "center",
+  },
   cardContent: {},
   delete: {
     margin: "auto",

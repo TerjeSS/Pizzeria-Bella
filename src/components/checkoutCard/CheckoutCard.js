@@ -14,10 +14,13 @@ import {
   SvgIcon,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
 export default function CheckoutCard() {
   const style = checkoutCardStyle();
-  const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const cards = [1, 2, 3, 4];
   return (
     <Container className={style.cardGrid}>
       <Grid container spacing={4}>
@@ -44,18 +47,20 @@ export default function CheckoutCard() {
                   <DeleteIcon />
                   <DeleteIcon />
                 </Box>
-                <Box>
-                  <IconButton aria-label="delete" size="large">
-                    <DeleteIcon />
-                    <DeleteIcon />
-                    <DeleteIcon />
+                <Box className={style.rowBox}>
+                  <IconButton aria-label="add" size="large">
+                    <AddCircleOutlineIcon />
+                  </IconButton>
+                  <div>1</div>
+                  <IconButton aria-label="add" size="large">
+                    <RemoveCircleOutlineIcon />
                   </IconButton>
                 </Box>
               </Box>
 
               <Box className={style.delete}>
                 <IconButton aria-label="delete" size="large">
-                  <DeleteIcon sx={{ height: 38, width: 38 }} />
+                  <DeleteOutlineIcon sx={{ height: 38, width: 38 }} />
                 </IconButton>
               </Box>
             </Card>
