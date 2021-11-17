@@ -7,10 +7,12 @@ import { Container } from "@material-ui/core";
 import React, { useState } from "react";
 import useStyles from "../../materialStyles";
 import SideDrawer from "../SideDrawer/SideDrawer";
+import TopDrawer from "../TopDrawer/TopDrawer";
 
 const Navbar = () => {
   const styles = useStyles();
 
+  const [toggleTopDrawer, setToggleTopDrawer] = useState(false);
   const [toggleDrawer, setToggleDrawer] = useState(false);
 
   const handleToggle = () => {
@@ -19,10 +21,20 @@ const Navbar = () => {
     });
   };
 
+  const handleTopToggle = () => {
+    setToggleTopDrawer((prev) => {
+      return (prev = !prev);
+    });
+  };
+
   console.log(toggleDrawer);
 
   return (
     <>
+      <TopDrawer
+        toggleTopDrawer={toggleTopDrawer}
+        handleTopToggle={handleTopToggle}
+      />
       <SideDrawer toggleDrawer={toggleDrawer} handleToggle={handleToggle} />
       <AppBar
         style={{ backgroundColor: "#fff", boxShadow: "none" }}
@@ -36,7 +48,7 @@ const Navbar = () => {
               edge="start"
               aria-label="menu"
             >
-              <ShoppingCartIcon />
+              <ShoppingCartIcon onClick={handleTopToggle} />
             </IconButton>
             <Typography
               variant="h6"
