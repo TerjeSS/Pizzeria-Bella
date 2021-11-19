@@ -7,10 +7,11 @@ const checkoutCardStyle = makeStyles((theme) => ({
     minWidth: "300px",
     display: "flex",
     flexShrink: "1",
+    border: "1px solid #0F2841",
   },
   cardMedia: {
     height: "100%",
-    minWidth: "23%",
+    minWidth: "28%",
     objectFit: "cover",
   },
   columnBox: {

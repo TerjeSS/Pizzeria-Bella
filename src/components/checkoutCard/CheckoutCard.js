@@ -6,7 +6,6 @@ import {
   Card,
   CardContent,
   CardMedia,
-  Container,
   Grid,
   Box,
   IconButton,
@@ -21,11 +20,22 @@ import trashImg from "./img/trash.png";
 
 export default function CheckoutCard() {
   const style = checkoutCardStyle();
-  const cards = [1, 2, 3, 4];
+
+  const products = [
+    {
+      name: "pizza",
+      price: 149,
+    },
+    {
+      name: "pasta",
+      price: 199,
+    },
+  ];
+
   return (
     <Grid container spacing={3}>
-      {cards.map((card) => (
-        <Grid item key={card} xs={12} sm={12} md={6} lg={6}>
+      {products.map((product) => (
+        <Grid item key={product} xs={12} sm={12} md={6} lg={6}>
           <Card
             className={style.card}
             style={{ backgroundColor: "#E9EDF0", borderRadius: "5%" }}
@@ -38,9 +48,11 @@ export default function CheckoutCard() {
 
             <CardContent className={style.cardContent}>
               <Typography gutterBottom variant="h6">
-                scavere
+                {product.name}
               </Typography>
-              <Typography variant="subtitle1">Total: 80;</Typography>
+              <Typography variant="subtitle1">
+                Pris: {product.price};
+              </Typography>
             </CardContent>
 
             <Box className={style.columnBox}>
