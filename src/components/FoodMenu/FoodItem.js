@@ -16,18 +16,38 @@ import bolognese from '../../img/bolognese.jpg';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import Quantity from './Quantity';
 import { Box, height } from '@mui/system';
+import Products from '../../Products';
 
 const FoodItem = (props) => {
 	const { name, priceSmall, priceLarge, ingredients, allergens, image, description, category, id } = props;
-	const styles = useStyles();
+
+	//funksjon for å utvide kortet med riktig state.
+	const dotsClicked = () => {
+		setExpanded(!expanded);
+	};
 	const [
 		expanded,
 		setExpanded
 	] = useState(false);
-	const dotsClicked = () => {
-		setExpanded(!expanded);
-	};
 
+	//Funksjoner og state for shoppingCart. Dette må kanskje flyttes enda et hakk opp for å fungere i
+	//shopping-carten på alle sidene?
+
+	const [
+		shoppingCart,
+		setShoppingCart
+	] = useState([]);
+	const addToCart = (e) => {
+		const id = e.currentTarget.getAttribute('value');
+		console.log('id' + id);
+		let tempArray = Products.filter((product) => product.id == id);
+		console.log('temp' + tempArray);
+		setShoppingCart([
+			...shoppingCart,
+			tempArray[0]
+		]);
+		console.log(shoppingCart);
+	};
 	return (
 		<Grid item xs={12} sm={12} lg={6}>
 			<Card
@@ -96,6 +116,8 @@ const FoodItem = (props) => {
 							style={{ padding: '0', marginRight: '1px', marginTop: '30px' }}
 							edge="end"
 							size="medium"
+							value={id}
+							onClick={(e) => addToCart(e)}
 						>
 							<AddShoppingCartIcon />
 						</IconButton>
