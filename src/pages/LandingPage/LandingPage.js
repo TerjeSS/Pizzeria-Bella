@@ -1,26 +1,26 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
-import pizza from "../../img/pizza1.jpg";
+import pizza from "../../img/pizza2.jpg";
 import carbonara from "../../img/carbonara.jpg";
-import spaghetti from "../../img/spaghetti.jpg";
+import spaghetti from "../../img/spaghetti2.jpg";
 import LandingPageStyles from "./LandingPageStyles";
 import { Container } from "@material-ui/core";
 const LandingPage = () => {
   const styles = LandingPageStyles();
 
   return (
-    <Container>
+    <Container style={{ marginTop: "100px" }}>
       <Box>
         <div className={styles.imgWrapper}>
           <img
+            src={pizza}
             style={{
               objectFit: "cover",
               width: "100%",
               height: "100%",
               borderRadius: "20px",
             }}
-            src={pizza}
             alt="a pizza"
           />
           <h1
@@ -36,13 +36,13 @@ const LandingPage = () => {
         <span className={styles.line}></span>
         <div className={styles.imgWrapper2}>
           <img
+            src={spaghetti}
             style={{
               objectFit: "cover",
               width: "100%",
               height: "100%",
               borderRadius: "20px",
             }}
-            src={spaghetti}
             alt="bowl of spaghetti"
           />
         </div>
@@ -56,7 +56,6 @@ const LandingPage = () => {
               height: "100%",
               borderRadius: "20px",
             }}
-            src={carbonara}
             alt="a plate with carbonara"
           />
         </div>

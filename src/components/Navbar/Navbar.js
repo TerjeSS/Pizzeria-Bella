@@ -10,7 +10,7 @@ import SideDrawer from "../SideDrawer/SideDrawer";
 import TopDrawer from "../TopDrawer/TopDrawer";
 
 const Navbar = () => {
-	const styles = useStyles();
+  const styles = useStyles();
 
   const [toggleTopDrawer, setToggleTopDrawer] = useState(false);
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -37,7 +37,13 @@ const Navbar = () => {
       />
       <SideDrawer toggleDrawer={toggleDrawer} handleToggle={handleToggle} />
       <AppBar
-        style={{ backgroundColor: "#fff", boxShadow: "none" }}
+        style={{
+          backgroundColor: "#fff",
+          boxShadow: "none",
+          position: "fixed",
+          top: "0",
+          zIndex: "1",
+        }}
         position="static"
       >
         <Container maxWidth="lg">
