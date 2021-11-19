@@ -10,7 +10,7 @@ import SideDrawer from "../SideDrawer/SideDrawer";
 import TopDrawer from "../TopDrawer/TopDrawer";
 
 const Navbar = () => {
-  const styles = useStyles();
+	const styles = useStyles();
 
   const [toggleTopDrawer, setToggleTopDrawer] = useState(false);
   const [toggleDrawer, setToggleDrawer] = useState(false);
