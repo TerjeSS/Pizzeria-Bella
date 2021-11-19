@@ -6,7 +6,7 @@ const useStyles = makeStyles({
     color: "#fff",
   },
 
-  nav: {
+  navbar: {
     backgroundColor: "#fff",
     color: "#515151",
     boxShadow: "none",

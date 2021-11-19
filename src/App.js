@@ -4,7 +4,7 @@ import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
 import MenuPage from "./pages/MenuPage/MenuPage";
 import Navbar from "./components/Navbar/Navbar";
 import useStyles from "./materialStyles";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
