@@ -4,19 +4,19 @@ import checkoutCardStyle from "./CheckoutCardstyle";
 import {
   Typography,
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   Container,
   Grid,
   Box,
   IconButton,
-  SvgIcon,
 } from "@mui/material";
+// icons and png
 import DeleteIcon from "@mui/icons-material/Delete";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import glutenImg from "./img/gluten.png";
 
 export default function CheckoutCard() {
   const style = checkoutCardStyle();
@@ -26,7 +26,7 @@ export default function CheckoutCard() {
       <Grid container spacing={4}>
         {cards.map((card) => (
           <Grid item key={card} xs={12} sm={6} md={4}>
-            <Card className={style.card}>
+            <Card className={style.card} style={{ backgroundColor: "#E9EDF0" }}>
               <CardMedia
                 className={style.cardMedia}
                 image="https://source.unsplash.com/random/"
@@ -43,7 +43,7 @@ export default function CheckoutCard() {
 
               <Box className={style.columnBox}>
                 <Box>
-                  <DeleteIcon />
+                  <img src={glutenImg} className={style.pngIcon} />
                   <DeleteIcon />
                   <DeleteIcon />
                 </Box>

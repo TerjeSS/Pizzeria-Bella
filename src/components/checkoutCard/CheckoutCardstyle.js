@@ -19,10 +19,12 @@ const checkoutCardStyle = makeStyles((theme) => ({
     display: "flex",
     borderRadius: "50%",
     border: "black",
+    backgroundColor: "#D3D3D3",
   },
   cardMedia: {
     height: "100%",
-    width: "33%",
+    minWidth: "33%",
+    objectFit: "cover",
   },
   columnBox: {
     display: "flex",
@@ -36,6 +38,9 @@ const checkoutCardStyle = makeStyles((theme) => ({
   cardContent: {},
   delete: {
     margin: "auto",
+  },
+  pngIcon: {
+    height: "20px",
   },
 })); // returns an object that contains all the styles
 
