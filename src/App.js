@@ -4,10 +4,11 @@ import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
 import MenuPage from "./pages/MenuPage/MenuPage";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-
+import GlobalStyles from "./GlobalStyles";
 function App() {
   return (
     <div>
+      <GlobalStyles />
       <Navbar />
 
       <Routes>

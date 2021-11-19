@@ -4,7 +4,7 @@ const FooterStyles = makeStyles({
   footer: {
     backgroundColor: "#0F2841",
     color: "#fff",
-    marginTop: "27px",
+    marginTop: "52px",
   },
 
   footerh1: {

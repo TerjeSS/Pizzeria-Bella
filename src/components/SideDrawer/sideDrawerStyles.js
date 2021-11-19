@@ -19,7 +19,7 @@ const drawerStyles = makeStyles({
   sidebarWrapper: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between",
+    justifyContent: "start",
     height: "100%",
     width: "200px",
     fontFamily: "Poppins",
@@ -27,7 +27,9 @@ const drawerStyles = makeStyles({
   },
   sidebarLinks: {
     display: "flex",
+    justifyContent: "space-between",
     flexDirection: "column",
+    height: "100%",
   },
 
   link: {
@@ -37,7 +39,7 @@ const drawerStyles = makeStyles({
     width: "100%",
     color: "#515151",
     position: "relative",
-    fontWeight: "600",
+    fontWeight: "400",
 
     "&:hover": {
       color: "#2C3D4F",
@@ -50,11 +52,17 @@ const drawerStyles = makeStyles({
     textDecoration: "none",
     backgroundColor: "#0F2841",
     marginBottom: "20px",
-    fontWeight: "600",
+    fontSize: "12px",
+    fontWeight: "400",
 
     "&:hover": {
       backgroundColor: "#2C3D4F",
     },
+  },
+
+  links: {
+    display: "flex",
+    flexDirection: "column",
   },
 });
 

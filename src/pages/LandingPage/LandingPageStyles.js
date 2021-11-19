@@ -12,9 +12,25 @@ const LandingPageStyles = makeStyles({
     marginBottom: "27px",
     boxShadow:
       "rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px",
+
+    "&::before": {
+      position: "absolute",
+      content: '""',
+      top: "0",
+      left: "0",
+      bottom: "0",
+      right: "0",
+
+      backgroundColor: "rgba(153,39,39, 0.1)",
+      display: "block",
+      borderRadius: "20px",
+    },
   },
 
   imgWrapper2: {
+    display: "flex",
+    justifyContent: "center",
+    position: "relative",
     margin: "auto",
     borderRadius: "20px",
     height: "150px",
@@ -22,6 +38,19 @@ const LandingPageStyles = makeStyles({
     marginBottom: "27px",
     boxShadow:
       "rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px",
+
+    "&::before": {
+      position: "absolute",
+      content: '""',
+      top: "0",
+      left: "0",
+      bottom: "0",
+      right: "0",
+
+      backgroundColor: "rgba(39,82,153, 0.3)",
+      display: "block",
+      borderRadius: "20px",
+    },
   },
 
   line: {
