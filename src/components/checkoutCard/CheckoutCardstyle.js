@@ -1,29 +1,16 @@
 import { makeStyles } from "@material-ui/core";
 
 const checkoutCardStyle = makeStyles((theme) => ({
-  container: {
-    backgroundColor: "f4f4f4",
-  },
-  box: {},
-  icon: {
-    // marginRight: "20px",
-  },
-  buttons: {
-    // marginTop: "40px",
-  },
-  cardGrid: {
-    // padding: "20px 0",
-  },
   card: {
-    height: "100%",
+    margin: "10px",
+    height: "100px",
+    minWidth: "300px",
     display: "flex",
-    borderRadius: "50%",
-    border: "black",
-    backgroundColor: "#D3D3D3",
+    flexShrink: "1",
   },
   cardMedia: {
     height: "100%",
-    minWidth: "33%",
+    minWidth: "23%",
     objectFit: "cover",
   },
   columnBox: {
@@ -34,13 +21,16 @@ const checkoutCardStyle = makeStyles((theme) => ({
   rowBox: {
     display: "flex",
     alignItems: "center",
+    marginTop: "10px",
   },
-  cardContent: {},
   delete: {
     margin: "auto",
   },
   pngIcon: {
-    height: "20px",
+    height: "18px",
+  },
+  deleteIcon: {
+    height: "40px",
   },
 })); // returns an object that contains all the styles
 

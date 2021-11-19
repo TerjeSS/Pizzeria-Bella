@@ -12,61 +12,61 @@ import {
   IconButton,
 } from "@mui/material";
 // icons and png
-import DeleteIcon from "@mui/icons-material/Delete";
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import glutenImg from "./img/gluten.png";
+import milkImg from "./img/milk-bottle.png";
+import soyaImg from "./img/soya.png";
+import trashImg from "./img/trash.png";
 
 export default function CheckoutCard() {
   const style = checkoutCardStyle();
   const cards = [1, 2, 3, 4];
   return (
-    <Container className={style.cardGrid}>
-      <Grid container spacing={4}>
-        {cards.map((card) => (
-          <Grid item key={card} xs={12} sm={6} md={4}>
-            <Card className={style.card} style={{ backgroundColor: "#E9EDF0" }}>
-              <CardMedia
-                className={style.cardMedia}
-                image="https://source.unsplash.com/random/"
-                title="Image title"
-              />
+    <Grid container spacing={3}>
+      {cards.map((card) => (
+        <Grid item key={card} xs={12} sm={12} md={6} lg={6}>
+          <Card
+            className={style.card}
+            style={{ backgroundColor: "#E9EDF0", borderRadius: "5%" }}
+          >
+            <CardMedia
+              className={style.cardMedia}
+              image="https://source.unsplash.com/random/"
+              title="Image title"
+            />
+
+            <CardContent className={style.cardContent}>
+              <Typography gutterBottom variant="h6">
+                scavere
+              </Typography>
+              <Typography variant="subtitle1">Total: 80;</Typography>
+            </CardContent>
+
+            <Box className={style.columnBox}>
               <Box>
-                <CardContent className={style.cardContent}>
-                  <Typography gutterBottom variant="h5">
-                    scavere
-                  </Typography>
-                  <Typography>Total: 80;</Typography>
-                </CardContent>
+                <img src={glutenImg} className={style.pngIcon} />
+                <img src={soyaImg} className={style.pngIcon} />
+                <img src={milkImg} className={style.pngIcon} />
               </Box>
-
-              <Box className={style.columnBox}>
-                <Box>
-                  <img src={glutenImg} className={style.pngIcon} />
-                  <DeleteIcon />
-                  <DeleteIcon />
-                </Box>
-                <Box className={style.rowBox}>
-                  <IconButton aria-label="add" size="large">
-                    <AddCircleOutlineIcon />
-                  </IconButton>
-                  <div>1</div>
-                  <IconButton aria-label="add" size="large">
-                    <RemoveCircleOutlineIcon />
-                  </IconButton>
-                </Box>
-              </Box>
-
-              <Box className={style.delete}>
-                <IconButton aria-label="delete" size="large">
-                  <DeleteOutlineIcon sx={{ height: 38, width: 38 }} />
+              <Box className={style.rowBox}>
+                <IconButton aria-label="add" size="small">
+                  <AddCircleOutlineIcon />
+                </IconButton>
+                <Typography>1</Typography>
+                <IconButton aria-label="add" size="small">
+                  <RemoveCircleOutlineIcon />
                 </IconButton>
               </Box>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+            </Box>
+            <Box className={style.delete}>
+              <IconButton aria-label="delete">
+                <img src={trashImg} className={style.deleteIcon} />
+              </IconButton>
+            </Box>
+          </Card>
+        </Grid>
+      ))}
+    </Grid>
   );
 }
