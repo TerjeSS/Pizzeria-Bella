@@ -29,6 +29,7 @@ const FoodItem = (props) => {
 	return (
 		<Grid item xs={12} sm={12} lg={6}>
 			<Card
+				onClick={dotsClicked}
 				style={{
 					display         : 'flex',
 					flexDirection   : 'row',
@@ -40,7 +41,7 @@ const FoodItem = (props) => {
 			>
 				<Grid container direction="row" style={{ width: '100%' }} alignItems="center">
 					<Grid item xs={2} md={2}>
-						<img src={bolognese} alt="bolognese" width="45" style={{ marginRight: '5px' }} />
+						<img src={`../../img/${image}`} alt={name} width="45" style={{ marginRight: '5px' }} />
 					</Grid>
 					<Grid item xs={9} md={9} sx={{ border: '1px solid green' }} style={{ overflowWrap: 'break-word' }}>
 						<Typography component="h5" variant="h5" style={{}}>
@@ -50,8 +51,16 @@ const FoodItem = (props) => {
 						<Grid item style={{}}>
 							<FormControl>
 								<RadioGroup row defaultValue="Liten" name="størrelse">
-									<FormControlLabel value="Liten" label="Liten: 99,-" control={<Radio />} />
-									<FormControlLabel value="Stor" control={<Radio />} label="Stor: 129,-" />
+									<FormControlLabel
+										value="Liten"
+										label={`Liten: ${priceSmall},-`}
+										control={<Radio />}
+									/>
+									<FormControlLabel
+										value="Stor"
+										control={<Radio />}
+										label={`Stor: ${priceLarge},-`}
+									/>
 								</RadioGroup>
 							</FormControl>
 						</Grid>
