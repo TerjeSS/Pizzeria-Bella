@@ -85,7 +85,28 @@ const FoodItem = (props) => {
 							<AddShoppingCartIcon />
 						</IconButton>
 						<IconButton style={{ paddingLeft: '0' }} edge="end" size="large" onClick={dotsClicked}>
-							<MoreHorizIcon />
+							{expanded ? (
+								<Grid
+									item
+									xs={1}
+									md={1}
+									style={{
+										display       : 'flex',
+										flexDirection : 'column',
+										position      : 'relative'
+									}}
+								>
+									<IconButton style={{ paddingLeft: '0' }} edge="end" size="large">
+										<AddShoppingCartIcon />
+									</IconButton>
+									<Typography variant="h5">5</Typography>
+									<IconButton style={{ paddingLeft: '0' }} edge="end" size="large">
+										<AddShoppingCartIcon />
+									</IconButton>
+								</Grid>
+							) : (
+								<MoreHorizIcon />
+							)}
 						</IconButton>
 					</Grid>
 				</Grid>
