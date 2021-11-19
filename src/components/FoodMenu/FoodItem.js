@@ -40,10 +40,16 @@ const FoodItem = (props) => {
 				}}
 			>
 				<Grid container direction="row" style={{ width: '100%' }} alignItems="center">
-					<Grid item xs={2} md={2}>
-						<img src={`../../img/${image}`} alt={name} width="45" style={{ marginRight: '5px' }} />
+					<Grid item xs={2} md={2} style={{ height: '100%' }}>
+						<img
+							src={image}
+							alt={name}
+							width="100%"
+							height="100%"
+							style={{ marginRight: '5px', objectFit: 'cover' }}
+						/>
 					</Grid>
-					<Grid item xs={9} md={9} sx={{ border: '1px solid green' }} style={{ overflowWrap: 'break-word' }}>
+					<Grid item xs={9} md={9} sx={{ border: '1px solid green' }}>
 						<Typography component="h5" variant="h5" style={{}}>
 							{name}
 						</Typography>
@@ -65,11 +71,20 @@ const FoodItem = (props) => {
 							</FormControl>
 						</Grid>
 					</Grid>
-					<Grid item xs={1} md={1} style={{ display: 'flex', flexDirection: 'column', position: 'relative' }}>
-						<IconButton edge="end" size="large">
+					<Grid
+						item
+						xs={1}
+						md={1}
+						style={{
+							display       : 'flex',
+							flexDirection : 'column',
+							position      : 'relative'
+						}}
+					>
+						<IconButton style={{ paddingLeft: '0' }} edge="end" size="large">
 							<AddShoppingCartIcon />
 						</IconButton>
-						<IconButton edge="end" size="large" onClick={dotsClicked}>
+						<IconButton style={{ paddingLeft: '0' }} edge="end" size="large" onClick={dotsClicked}>
 							<MoreHorizIcon />
 						</IconButton>
 					</Grid>
