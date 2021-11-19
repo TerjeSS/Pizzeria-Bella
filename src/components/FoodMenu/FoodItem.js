@@ -9,13 +9,22 @@ import {
 	Radio
 } from '@material-ui/core';
 import React from 'react';
+import { useState } from 'react';
 import useStyles from '../../materialStyles';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import bolognese from '../../img/bolognese.jpg';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
-const FoodItem = () => {
+const FoodItem = (props) => {
+	const { name, priceSmall, priceLarge, ingredients, allergens, image, description, category } = props;
 	const styles = useStyles();
+	const [
+		expanded,
+		setExpanded
+	] = useState(false);
+	const dotsClicked = () => {
+		setExpanded(!expanded);
+	};
 
 	return (
 		<Grid item xs={12} sm={12} lg={6}>
@@ -33,11 +42,11 @@ const FoodItem = () => {
 					<Grid item xs={2} md={2}>
 						<img src={bolognese} alt="bolognese" width="45" style={{ marginRight: '5px' }} />
 					</Grid>
-					<Grid item xs={8.5} md={8.5} sx={{ border: '1px solid green' }}>
+					<Grid item xs={9} md={9} sx={{ border: '1px solid green' }} style={{ overflowWrap: 'break-word' }}>
 						<Typography component="h5" variant="h5" style={{}}>
-							Bolognese
+							{name}
 						</Typography>
-						<Typography>Tomat, kjøtt, penne</Typography>
+						<Typography>{expanded ? ingredients : `${ingredients.substring(0, 23)}...`}</Typography>
 						<Grid item style={{}}>
 							<FormControl>
 								<RadioGroup row defaultValue="Liten" name="størrelse">
@@ -47,16 +56,11 @@ const FoodItem = () => {
 							</FormControl>
 						</Grid>
 					</Grid>
-					<Grid
-						item
-						xs={1.5}
-						md={1.5}
-						style={{ display: 'flex', flexDirection: 'column', position: 'relative' }}
-					>
+					<Grid item xs={1} md={1} style={{ display: 'flex', flexDirection: 'column', position: 'relative' }}>
 						<IconButton edge="end" size="large">
 							<AddShoppingCartIcon />
 						</IconButton>
-						<IconButton edge="end" size="large">
+						<IconButton edge="end" size="large" onClick={dotsClicked}>
 							<MoreHorizIcon />
 						</IconButton>
 					</Grid>

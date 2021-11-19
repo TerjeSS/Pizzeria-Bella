@@ -19,9 +19,9 @@ const MenuPage = () => {
 				<Link href="#">Dessert</Link>
 			</Box>
 			<Grid container spacing="3">
-				<FoodItem />
-
-				<FoodItem />
+				{Products.map((object) => {
+					return <FoodItem {...object} />;
+				})}
 			</Grid>
 		</Container>
 	);

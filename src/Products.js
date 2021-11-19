@@ -33,7 +33,7 @@ const Products = [
 		name        : 'Fellini',
 		priceSmall  : 160,
 		priceLarge  : 220,
-		ingredients : 'Parmaskinke, cherrytomat, ruccola, parmesan',
+		ingredients : 'Parmaskinke, cherrytomat, ruccola',
 		allergens   : 'hvete',
 		image       : 'pizza.png',
 		description : 'Laget med ferske tomater, og vår kjente hjemmelagde saus',
@@ -51,7 +51,8 @@ const Products = [
 	},
 	{
 		name        : 'Carbonara',
-		price       : 149,
+		priceSmall  : 160,
+		priceLarge  : 220,
 		ingredients : 'Tagliatelle, bacon, egg, parmeggiano',
 		allergens   : 'Egg, hvete, melk',
 		image       : 'carbonara.png',
@@ -60,7 +61,8 @@ const Products = [
 	},
 	{
 		name        : 'Bolognese',
-		price       : 129,
+		priceSmall  : 160,
+		priceLarge  : 220,
 		ingredients : 'Penne, storfekjøtt, løk',
 		allergens   : 'Hvetea',
 		image       : 'carbonara.png',
@@ -69,7 +71,8 @@ const Products = [
 	},
 	{
 		name        : 'Lasagne',
-		price       : 129,
+		priceSmall  : 160,
+		priceLarge  : 220,
 		ingredients : 'Kjøttdeig, ost, løk, hvitløk',
 		allergens   : 'Hvetea',
 		image       : 'carbonara.png',
@@ -77,18 +80,20 @@ const Products = [
 		category    : 'pasta'
 	},
 	{
-		name       : 'Coca cola',
-		priceSmall : 29,
-		priceLarge : 35,
-		image      : 'cola.png',
-		category   : 'drink'
+		name        : 'Coca cola',
+		priceSmall  : 29,
+		priceLarge  : 35,
+		ingredients : '',
+		image       : 'cola.png',
+		category    : 'drink'
 	},
 	{
-		name       : 'pepsi',
-		priceSmall : 29,
-		priceLarge : 35,
-		image      : 'pepsi.png',
-		category   : 'drink'
+		name        : 'pepsi',
+		priceSmall  : 29,
+		priceLarge  : 35,
+		ingredients : '',
+		image       : 'pepsi.png',
+		category    : 'drink'
 	}
 ];
 
