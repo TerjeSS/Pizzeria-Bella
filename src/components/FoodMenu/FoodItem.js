@@ -14,9 +14,11 @@ import useStyles from '../../materialStyles';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import bolognese from '../../img/bolognese.jpg';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import Quantity from './Quantity';
+import { Box, height } from '@mui/system';
 
 const FoodItem = (props) => {
-	const { name, priceSmall, priceLarge, ingredients, allergens, image, description, category } = props;
+	const { name, priceSmall, priceLarge, ingredients, allergens, image, description, category, id } = props;
 	const styles = useStyles();
 	const [
 		expanded,
@@ -39,74 +41,72 @@ const FoodItem = (props) => {
 					backgroundColor : '#E9EDF0'
 				}}
 			>
-				<Grid container direction="row" style={{ width: '100%' }} alignItems="center">
-					<Grid item xs={2} md={2} style={{ height: '100%' }}>
-						<img
-							src={image}
-							alt={name}
-							width="100%"
-							height="100%"
-							style={{ marginRight: '5px', objectFit: 'cover' }}
-						/>
+				<Grid container direction="row" style={{}} alignItems="center">
+					<Grid item xs={3} md={2} style={{ height: '100%', marginRight: '11px' }}>
+						<img src={image} alt={name} width="100%" height="100%" style={{ objectFit: 'cover' }} />
 					</Grid>
-					<Grid item xs={9} md={9} sx={{ border: '1px solid green' }}>
+					<Grid
+						item
+						xs={7}
+						md={8}
+						style={{
+							display        : 'flex',
+							flexDirection  : 'column',
+							justifyContent : 'space-between',
+							height         : '100%'
+						}}
+					>
 						<Typography component="h5" variant="h5" style={{}}>
 							{name}
 						</Typography>
-						<Typography>{expanded ? ingredients : `${ingredients.substring(0, 23)}...`}</Typography>
-						<Grid item style={{}}>
-							<FormControl>
+						<Typography style={{ fontSize: '13px' }}>
+							{expanded ? ingredients : `${ingredients.substring(0, 33)}...`}
+						</Typography>
+						<Grid item style={{ position: 'relative' }}>
+							<Box display={{ fontSize: '12px' }}>
 								<RadioGroup row defaultValue="Liten" name="størrelse">
 									<FormControlLabel
 										value="Liten"
+										size="small"
 										label={`Liten: ${priceSmall},-`}
 										control={<Radio />}
 									/>
 									<FormControlLabel
+										style={{ fontSize: '10px' }}
 										value="Stor"
+										size="small"
 										control={<Radio />}
 										label={`Stor: ${priceLarge},-`}
 									/>
 								</RadioGroup>
-							</FormControl>
+							</Box>
 						</Grid>
 					</Grid>
 					<Grid
 						item
-						xs={1}
-						md={1}
+						xs
 						style={{
-							display       : 'flex',
-							flexDirection : 'column',
-							position      : 'relative'
+							display        : 'flex',
+							flexDirection  : 'column',
+							justifyContent : 'space-between',
+							marginRight    : '7px',
+							height         : '100%'
 						}}
 					>
-						<IconButton style={{ paddingLeft: '0' }} edge="end" size="large">
+						<IconButton
+							style={{ padding: '0', marginRight: '1px', marginTop: '30px' }}
+							edge="end"
+							size="medium"
+						>
 							<AddShoppingCartIcon />
 						</IconButton>
-						<IconButton style={{ paddingLeft: '0' }} edge="end" size="large" onClick={dotsClicked}>
-							{expanded ? (
-								<Grid
-									item
-									xs={1}
-									md={1}
-									style={{
-										display       : 'flex',
-										flexDirection : 'column',
-										position      : 'relative'
-									}}
-								>
-									<IconButton style={{ paddingLeft: '0' }} edge="end" size="large">
-										<AddShoppingCartIcon />
-									</IconButton>
-									<Typography variant="h5">5</Typography>
-									<IconButton style={{ paddingLeft: '0' }} edge="end" size="large">
-										<AddShoppingCartIcon />
-									</IconButton>
-								</Grid>
-							) : (
-								<MoreHorizIcon />
-							)}
+						<IconButton
+							style={{ padding: '0', marginRight: '1px' }}
+							edge="end"
+							size="large"
+							onClick={dotsClicked}
+						>
+							{expanded ? <Quantity /> : <MoreHorizIcon style={{ marginTop: '34px' }} />}
 						</IconButton>
 					</Grid>
 				</Grid>
