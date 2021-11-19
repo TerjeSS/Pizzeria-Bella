@@ -31,7 +31,6 @@ const FoodItem = (props) => {
 	return (
 		<Grid item xs={12} sm={12} lg={6}>
 			<Card
-				onClick={dotsClicked}
 				style={{
 					display         : 'flex',
 					flexDirection   : 'row',
@@ -42,7 +41,7 @@ const FoodItem = (props) => {
 				}}
 			>
 				<Grid container direction="row" style={{}} alignItems="center">
-					<Grid item xs={3} md={2} style={{ height: '100%', marginRight: '11px' }}>
+					<Grid item xs={3} md={2} style={{ height: '100%', marginRight: '11px' }} onClick={dotsClicked}>
 						<img src={image} alt={name} width="100%" height="100%" style={{ objectFit: 'cover' }} />
 					</Grid>
 					<Grid
@@ -56,10 +55,10 @@ const FoodItem = (props) => {
 							height         : '100%'
 						}}
 					>
-						<Typography component="h5" variant="h5" style={{}}>
+						<Typography component="h5" variant="h5" style={{}} onClick={dotsClicked}>
 							{name}
 						</Typography>
-						<Typography style={{ fontSize: '13px' }}>
+						<Typography style={{ fontSize: '13px' }} onClick={dotsClicked}>
 							{expanded ? ingredients : `${ingredients.substring(0, 33)}...`}
 						</Typography>
 						<Grid item style={{ position: 'relative' }}>
