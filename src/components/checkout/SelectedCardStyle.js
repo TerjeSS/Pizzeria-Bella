@@ -1,6 +1,6 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
 
-const checkoutCardStyle = makeStyles((theme) => ({
+const SelectedCardStyle = makeStyles((theme) => ({
   card: {
     margin: "10px",
     height: "100px",
@@ -35,4 +35,4 @@ const checkoutCardStyle = makeStyles((theme) => ({
   },
 })); // returns an object that contains all the styles
 
-export default checkoutCardStyle;
+export default SelectedCardStyle;

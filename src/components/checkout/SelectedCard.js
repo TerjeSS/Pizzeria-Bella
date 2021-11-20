@@ -1,5 +1,5 @@
 import React from "react";
-import checkoutCardStyle from "./CheckoutCardstyle";
+import SelectedCardStyle from "./SelectedCardStyle";
 // material ui components:
 import {
   Typography,
@@ -18,8 +18,8 @@ import milkImg from "./img/milk-bottle.png";
 import soyaImg from "./img/soya.png";
 import trashImg from "./img/trash.png";
 
-export default function CheckoutCard(props) {
-  const style = checkoutCardStyle();
+export default function SelectedCard(props) {
+  const style = SelectedCardStyle();
   const { products } = props;
 
   return (
