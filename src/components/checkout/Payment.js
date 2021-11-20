@@ -14,8 +14,8 @@ export default function Payment() {
         <img className={style.pngIcon} src={vippsImg} alt="" />
         <img className={style.pngIcon} src={paypalImg} alt="" />
       </Box>
-      <Box className={style.textFieldBox}>
-        <Box component="form">
+      <Box>
+        <Box component="form" className={style.textFieldBox}>
           <TextField
             style={{
               margin: "5px 0",
