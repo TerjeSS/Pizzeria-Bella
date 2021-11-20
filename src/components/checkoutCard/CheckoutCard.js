@@ -18,19 +18,9 @@ import milkImg from "./img/milk-bottle.png";
 import soyaImg from "./img/soya.png";
 import trashImg from "./img/trash.png";
 
-export default function CheckoutCard() {
+export default function CheckoutCard(props) {
   const style = checkoutCardStyle();
-
-  const products = [
-    {
-      name: "pizza",
-      price: 149,
-    },
-    {
-      name: "pasta",
-      price: 199,
-    },
-  ];
+  const { products } = props;
 
   return (
     <Grid container spacing={3}>
@@ -42,7 +32,7 @@ export default function CheckoutCard() {
           >
             <CardMedia
               className={style.cardMedia}
-              image="https://source.unsplash.com/random/"
+              image={product.image}
               title="Image title"
             />
 

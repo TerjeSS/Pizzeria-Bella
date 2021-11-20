@@ -1,22 +1,13 @@
-import { style } from "@mui/system";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useStyles from "../../materialStyles";
 import CheckoutCard from "../../components/checkoutCard/CheckoutCard";
 import Total from "../../components/checkoutCard/Total";
 import { Container } from "@mui/material";
+import CheckoutProducts from "../../CheckoutProducts";
 
 const CheckoutPage = () => {
   const styles = useStyles();
-  const products = [
-    {
-      name: "pizza",
-      price: 149,
-    },
-    {
-      name: "pasta",
-      price: 199,
-    },
-  ];
+  const { products } = CheckoutProducts;
 
   return (
     <Container
