@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 const PaymentStyle = makeStyles((theme) => ({
   container: {
     backgroundColor: "#ECECEC",
-    paddingBottom: "50px",
+    padding: "40px",
   },
   textFieldBox: {
     backgroundColor: "#c4c4c4",
