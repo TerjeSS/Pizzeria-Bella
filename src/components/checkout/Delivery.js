@@ -9,12 +9,11 @@ import {
   TextField,
 } from "@mui/material";
 import React from "react";
+import HomeDelivery from "./HomeDelivery";
+import SelectedProducts from "../../SelectedProducts";
 
-export default function Total(props) {
-  const prices = props.products.map((product) => {
-    return product.price;
-  });
-  const reducer = (accumulator, curr) => accumulator + curr;
+export default function Total() {
+  const { products } = SelectedProducts; //
   return (
     <Container>
       <FormControl component="fieldset">
@@ -33,48 +32,7 @@ export default function Total(props) {
           />
         </RadioGroup>
       </FormControl>
-      <Box
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          margin: "20px 0",
-        }}
-      >
-        <Typography variant="h6">Tilberedningstid: </Typography>
-        <Typography variant="h6">Ca 25 min </Typography>
-      </Box>
-
-      <Box>
-        <TextField
-          style={{ width: "100%" }}
-          id="outlined-basic"
-          label="Navn"
-          variant="outlined"
-        />
-        <TextField
-          style={{ width: "100%" }}
-          id="outlined-basic"
-          label="Adresse"
-          variant="outlined"
-        />
-        <TextField
-          style={{ width: "100%" }}
-          id="outlined-basic"
-          label="Telefon"
-          variant="outlined"
-        />
-      </Box>
-
-      <Box
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          margin: "20px 0",
-        }}
-      >
-        <Typography variant="h4">Sum: </Typography>
-        <Typography variant="h4">{prices.reduce(reducer)} kr </Typography>
-      </Box>
+      <HomeDelivery products={products} />
     </Container>
   );
 }
