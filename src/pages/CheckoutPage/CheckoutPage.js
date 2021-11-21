@@ -20,7 +20,7 @@ const CheckoutPage = () => {
     >
       <h1>Selected Items</h1>
       <SelectedCard products={products} />
-      <Delivery products={products}></Delivery>
+      <Delivery></Delivery>
       <Payment />
     </Container>
   );
