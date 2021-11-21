@@ -13,7 +13,11 @@ const CheckoutPage = () => {
   return (
     <Container
       className={styles.global}
-      style={{ backgroundColor: "#f4f4f4", margin: "auto", padding: "15px 0" }}
+      style={{
+        backgroundColor: "#f4f4f4",
+        margin: "30px auto",
+        padding: "15px 0",
+      }}
     >
       <h1>Selected Items</h1>
       <SelectedCard products={products} />
