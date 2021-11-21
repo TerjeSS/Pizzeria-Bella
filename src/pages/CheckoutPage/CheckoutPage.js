@@ -8,8 +8,7 @@ import Payment from "../../components/checkout/Payment";
 
 const CheckoutPage = () => {
   const styles = useStyles();
-  const { products } = SelectedProducts;
-  const [cartItems, setCartItems] = useState([]);
+  const { products } = SelectedProducts; // dummy values
   return (
     <Container
       className={styles.global}
