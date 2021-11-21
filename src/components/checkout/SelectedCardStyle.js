@@ -6,7 +6,6 @@ const SelectedCardStyle = makeStyles((theme) => ({
     height: "100px",
     minWidth: "300px",
     display: "flex",
-    flexShrink: "1",
     border: "1px solid #0F2841",
   },
   cardMedia: {
@@ -31,7 +30,7 @@ const SelectedCardStyle = makeStyles((theme) => ({
     height: "18px",
   },
   deleteIcon: {
-    height: "40px",
+    height: "38px",
   },
 })); // returns an object that contains all the styles
 

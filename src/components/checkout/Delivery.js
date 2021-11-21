@@ -40,8 +40,8 @@ export default function Total(props) {
           margin: "20px 0",
         }}
       >
-        <Typography variant="h5">Leveringstid: </Typography>
-        <Typography variant="h5">Ca 25 min </Typography>
+        <Typography variant="h6">Tilberedningstid: </Typography>
+        <Typography variant="h6">Ca 25 min </Typography>
       </Box>
 
       <Box>
@@ -73,7 +73,7 @@ export default function Total(props) {
         }}
       >
         <Typography variant="h4">Sum: </Typography>
-        <Typography variant="h4">{prices.reduce(reducer)}; NOK </Typography>
+        <Typography variant="h4">{prices.reduce(reducer)} kr </Typography>
       </Box>
     </Container>
   );

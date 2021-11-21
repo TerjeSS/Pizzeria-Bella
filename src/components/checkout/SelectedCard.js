@@ -40,7 +40,7 @@ export default function SelectedCard(props) {
               <Typography gutterBottom variant="h6">
                 {product.name}
               </Typography>
-              <Typography variant="subtitle1">
+              <Typography variant="subtitle2">
                 Pris: {product.price};
               </Typography>
             </CardContent>
