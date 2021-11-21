@@ -8,17 +8,24 @@ import {
   FormControl,
   TextField,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import HomeDelivery from "./HomeDelivery";
+import PickUp from "./PickUp";
 import SelectedProducts from "../../SelectedProducts";
 
 export default function Total() {
+  const [deliveryMethod, setDeliveryMethod] = useState("");
+  const handleDeliveryMethod = (event) => {
+    setDeliveryMethod(event.target.value);
+  };
+
   const { products } = SelectedProducts; //
   return (
     <Container>
       <FormControl component="fieldset">
         <RadioGroup
           style={{ display: "flex", flexDirection: "row", margin: "20px 0" }}
+          onClick={handleDeliveryMethod}
         >
           <FormControlLabel
             value="hente"
@@ -32,7 +39,8 @@ export default function Total() {
           />
         </RadioGroup>
       </FormControl>
-      <HomeDelivery products={products} />
+      {deliveryMethod == "levert" && <HomeDelivery products={products} />}
+      {deliveryMethod == "hente" && <PickUp products={products} />}
     </Container>
   );
 }

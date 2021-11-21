@@ -22,25 +22,27 @@ export default function HomeDelivery(props) {
 
       <Box>
         <TextField
-          style={{ width: "100%" }}
+          style={{ width: "100%", margin: "5px 0" }}
           id="outlined-basic"
           label="Navn"
           variant="outlined"
           size="small"
         />
         <TextField
-          style={{ width: "100%" }}
+          style={{ width: "100%", margin: "5px 0" }}
           id="outlined-basic"
           label="Adresse"
           variant="outlined"
           size="small"
+          required
         />
         <TextField
-          style={{ width: "100%" }}
+          style={{ width: "100%", margin: "5px 0" }}
           id="outlined-basic"
           label="Telefon"
           variant="outlined"
           size="small"
+          required
         />
       </Box>
 
