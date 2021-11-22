@@ -3,8 +3,9 @@ import { Box } from '@mui/system';
 import React from 'react';
 import FoodItem from '../../components/FoodMenu/FoodItem';
 import Products from '../../Products';
-const MenuPage = () => {
+const MenuPage = (props) => {
 	const products = Products;
+	const { shoppingCart, setShoppingCart, addToCart, quantity, setQuantity } = props;
 
 	return (
 		<Container>
@@ -20,7 +21,16 @@ const MenuPage = () => {
 			</Box>
 			<Grid container spacing="3">
 				{Products.map((object) => {
-					return <FoodItem {...object} />;
+					return (
+						<FoodItem
+							{...object}
+							shoppingCart={shoppingCart}
+							setShoppingCart={setShoppingCart}
+							addToCart={addToCart}
+							quantity={quantity}
+							setQuantity={setQuantity}
+						/>
+					);
 				})}
 			</Grid>
 		</Container>

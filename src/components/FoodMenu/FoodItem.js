@@ -19,7 +19,22 @@ import { Box, height } from '@mui/system';
 import Products from '../../Products';
 
 const FoodItem = (props) => {
-	const { name, priceSmall, priceLarge, ingredients, allergens, image, description, category, id } = props;
+	const {
+		name,
+		priceSmall,
+		priceLarge,
+		ingredients,
+		image,
+		id,
+		selectedSize,
+		shoppingCart,
+		setShoppingCart,
+		addToCart,
+		quantity,
+		setQuantity
+	} = props;
+
+	//State for antall å adde
 
 	//funksjon for å utvide kortet med riktig state.
 	const dotsClicked = () => {
@@ -30,24 +45,6 @@ const FoodItem = (props) => {
 		setExpanded
 	] = useState(false);
 
-	//Funksjoner og state for shoppingCart. Dette må kanskje flyttes enda et hakk opp for å fungere i
-	//shopping-carten på alle sidene?
-
-	const [
-		shoppingCart,
-		setShoppingCart
-	] = useState([]);
-	const addToCart = (e) => {
-		const id = e.currentTarget.getAttribute('value');
-		console.log('id' + id);
-		let tempArray = Products.filter((product) => product.id == id);
-		console.log('temp' + tempArray);
-		setShoppingCart([
-			...shoppingCart,
-			tempArray[0]
-		]);
-		console.log(shoppingCart);
-	};
 	return (
 		<Grid item xs={12} sm={12} lg={6}>
 			<Card
@@ -61,13 +58,22 @@ const FoodItem = (props) => {
 				}}
 			>
 				<Grid container direction="row" style={{}} alignItems="center">
-					<Grid item xs={3} md={2} style={{ height: '100%', marginRight: '11px' }} onClick={dotsClicked}>
+					<Grid
+						item
+						xs={3}
+						md={3}
+						lg={3}
+						style={{ height: '100%', marginRight: '11px' }}
+						onClick={dotsClicked}
+					>
 						<img src={image} alt={name} width="100%" height="100%" style={{ objectFit: 'cover' }} />
 					</Grid>
 					<Grid
 						item
+						container
 						xs={7}
-						md={8}
+						md={7}
+						lg={7}
 						style={{
 							display        : 'flex',
 							flexDirection  : 'column',
@@ -75,11 +81,11 @@ const FoodItem = (props) => {
 							height         : '100%'
 						}}
 					>
-						<Typography component="h5" variant="h5" style={{}} onClick={dotsClicked}>
+						<Typography component="h5" variant="h5" onClick={dotsClicked}>
 							{name}
 						</Typography>
 						<Typography style={{ fontSize: '13px' }} onClick={dotsClicked}>
-							{expanded ? ingredients : `${ingredients.substring(0, 33)}...`}
+							{expanded ? ingredients : `${ingredients.substring(0, 25)}...`}
 						</Typography>
 						<Grid item style={{ position: 'relative' }}>
 							<Box display={{ fontSize: '12px' }}>
@@ -103,7 +109,9 @@ const FoodItem = (props) => {
 					</Grid>
 					<Grid
 						item
-						xs
+						xs={1}
+						md={1}
+						lg={1}
 						style={{
 							display        : 'flex',
 							flexDirection  : 'column',
@@ -121,13 +129,12 @@ const FoodItem = (props) => {
 						>
 							<AddShoppingCartIcon />
 						</IconButton>
-						<IconButton
-							style={{ padding: '0', marginRight: '1px' }}
-							edge="end"
-							size="large"
-							onClick={dotsClicked}
-						>
-							{expanded ? <Quantity /> : <MoreHorizIcon style={{ marginTop: '34px' }} />}
+						<IconButton style={{ padding: '0', marginRight: '1px' }} edge="end" size="large">
+							{expanded ? (
+								<Quantity quantity={quantity} setQuantity={setQuantity} />
+							) : (
+								<MoreHorizIcon onClick={dotsClicked} style={{ marginTop: '34px' }} />
+							)}
 						</IconButton>
 					</Grid>
 				</Grid>
