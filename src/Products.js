@@ -1,16 +1,18 @@
 const Products = [
 	{
-		name        : 'Dolce Vita',
-		id          : 1,
-		priceSmall  : 160,
-		priceLarge  : 220,
-		ingredients :
+		name             : 'Dolce Vita',
+		id               : 1,
+		priceSmall       : 160,
+		priceLarge       : 220,
+		selectedSize     : '',
+		selectedQuantity : 0,
+		ingredients      :
 			'Biffstrimler, cherrytomat, avocado. Laget med ferske tomater, og vår kjente hjemmelagde saus. Allergener: Hvete',
-		allergens   : 'hvete',
-		image       :
+		allergens        : 'hvete',
+		image            :
 			'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=962&q=80',
-		description : 'Laget med ferske tomater, og vår kjente hjemmelagde saus',
-		category    : 'pizza'
+		description      : 'Laget med ferske tomater, og vår kjente hjemmelagde saus',
+		category         : 'pizza'
 	},
 	{
 		name        : 'Figaro',

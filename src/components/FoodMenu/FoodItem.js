@@ -26,6 +26,7 @@ const FoodItem = (props) => {
 		ingredients,
 		image,
 		id,
+		selectedSize,
 		shoppingCart,
 		setShoppingCart,
 		addToCart,
@@ -43,9 +44,6 @@ const FoodItem = (props) => {
 		expanded,
 		setExpanded
 	] = useState(false);
-
-	//Funksjoner og state for shoppingCart. Dette må kanskje flyttes enda et hakk opp for å fungere i
-	//shopping-carten på alle sidene?
 
 	return (
 		<Grid item xs={12} sm={12} lg={6}>
@@ -72,6 +70,7 @@ const FoodItem = (props) => {
 					</Grid>
 					<Grid
 						item
+						container
 						xs={7}
 						md={7}
 						lg={7}
@@ -82,7 +81,7 @@ const FoodItem = (props) => {
 							height         : '100%'
 						}}
 					>
-						<Typography component="h5" variant="h5" style={{}} onClick={dotsClicked}>
+						<Typography component="h5" variant="h5" onClick={dotsClicked}>
 							{name}
 						</Typography>
 						<Typography style={{ fontSize: '13px' }} onClick={dotsClicked}>
