@@ -19,13 +19,21 @@ import { Box, height } from '@mui/system';
 import Products from '../../Products';
 
 const FoodItem = (props) => {
-	const { name, priceSmall, priceLarge, ingredients, allergens, image, description, category, id } = props;
-
-	//State for antall å adde
-	const [
+	const {
+		name,
+		priceSmall,
+		priceLarge,
+		ingredients,
+		image,
+		id,
+		shoppingCart,
+		setShoppingCart,
+		addToCart,
 		quantity,
 		setQuantity
-	] = useState(0);
+	} = props;
+
+	//State for antall å adde
 
 	//funksjon for å utvide kortet med riktig state.
 	const dotsClicked = () => {
@@ -39,21 +47,6 @@ const FoodItem = (props) => {
 	//Funksjoner og state for shoppingCart. Dette må kanskje flyttes enda et hakk opp for å fungere i
 	//shopping-carten på alle sidene?
 
-	const [
-		shoppingCart,
-		setShoppingCart
-	] = useState([]);
-	const addToCart = (e) => {
-		const id = e.currentTarget.getAttribute('value');
-		console.log('id' + id);
-		let tempArray = Products.filter((product) => product.id == id);
-		console.log('temp' + tempArray);
-		setShoppingCart([
-			...shoppingCart,
-			tempArray[0]
-		]);
-		console.log(shoppingCart);
-	};
 	return (
 		<Grid item xs={12} sm={12} lg={6}>
 			<Card
@@ -63,18 +56,25 @@ const FoodItem = (props) => {
 					justifyContent  : 'space-between',
 					borderRadius    : '20px',
 					border          : '1px solid black',
-					backgroundColor : '#E9EDF0',
-					maxHeight       : '250px'
+					backgroundColor : '#E9EDF0'
 				}}
 			>
 				<Grid container direction="row" style={{}} alignItems="center">
-					<Grid item xs={3} md={3} style={{ height: '100%', marginRight: '11px' }} onClick={dotsClicked}>
+					<Grid
+						item
+						xs={3}
+						md={3}
+						lg={3}
+						style={{ height: '100%', marginRight: '11px' }}
+						onClick={dotsClicked}
+					>
 						<img src={image} alt={name} width="100%" height="100%" style={{ objectFit: 'cover' }} />
 					</Grid>
 					<Grid
 						item
 						xs={7}
-						md={8}
+						md={7}
+						lg={7}
 						style={{
 							display        : 'flex',
 							flexDirection  : 'column',
@@ -111,6 +111,8 @@ const FoodItem = (props) => {
 					<Grid
 						item
 						xs={1}
+						md={1}
+						lg={1}
 						style={{
 							display        : 'flex',
 							flexDirection  : 'column',

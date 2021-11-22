@@ -6,7 +6,31 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import GlobalStyles from './GlobalStyles';
 import Login from './pages/Login/Login';
+import Products from './Products';
+import { useState } from 'react';
+
 function App() {
+	//Attempt nr1 for AddToCart
+	const [
+		shoppingCart,
+		setShoppingCart
+	] = useState([]);
+	const addToCart = (e) => {
+		const id = e.currentTarget.getAttribute('value');
+		let tempArray = Products.filter((product) => product.id == id);
+		console.log('temp' + tempArray);
+		setShoppingCart([
+			...shoppingCart,
+			tempArray[0]
+		]);
+		console.log(shoppingCart);
+	};
+
+	const [
+		quantity,
+		setQuantity
+	] = useState(0);
+
 	return (
 		<div>
 			<GlobalStyles />
@@ -15,7 +39,18 @@ function App() {
 			<Routes>
 				<Route path="/" element={<LandingPage />} />
 				<Route path="/checkout" element={<CheckoutPage />} />
-				<Route path="/menu" element={<MenuPage />} />
+				<Route
+					path="/menu"
+					element={
+						<MenuPage
+							shoppingCart={shoppingCart}
+							setShoppingCart={setShoppingCart}
+							addToCart={addToCart}
+							quantity={quantity}
+							setQuantity={setQuantity}
+						/>
+					}
+				/>
 				<Route path="/login" element={<Login />} />
 			</Routes>
 			<Footer />
