@@ -21,6 +21,12 @@ import Products from '../../Products';
 const FoodItem = (props) => {
 	const { name, priceSmall, priceLarge, ingredients, allergens, image, description, category, id } = props;
 
+	//State for antall å adde
+	const [
+		quantity,
+		setQuantity
+	] = useState(0);
+
 	//funksjon for å utvide kortet med riktig state.
 	const dotsClicked = () => {
 		setExpanded(!expanded);
@@ -122,13 +128,12 @@ const FoodItem = (props) => {
 						>
 							<AddShoppingCartIcon />
 						</IconButton>
-						<IconButton
-							style={{ padding: '0', marginRight: '1px' }}
-							edge="end"
-							size="large"
-							onClick={dotsClicked}
-						>
-							{expanded ? <Quantity /> : <MoreHorizIcon style={{ marginTop: '34px' }} />}
+						<IconButton style={{ padding: '0', marginRight: '1px' }} edge="end" size="large">
+							{expanded ? (
+								<Quantity quantity={quantity} setQuantity={setQuantity} />
+							) : (
+								<MoreHorizIcon onClick={dotsClicked} style={{ marginTop: '34px' }} />
+							)}
 						</IconButton>
 					</Grid>
 				</Grid>
