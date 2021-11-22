@@ -41,7 +41,7 @@ export default function SelectedCard(props) {
                 {product.name}
               </Typography>
               <Typography variant="subtitle2">
-                Pris: {product.realPrice};
+                Pris: {product.realPrice * product.selectedQuantity} ;
               </Typography>
             </CardContent>
 

@@ -1,9 +1,9 @@
 import { Typography, Box, TextField } from "@mui/material";
 import React from "react";
 
-export default function HomeDelivery(props) {
-  const prices = props.products.map((product) => {
-    return product.price;
+export default function HomeDelivery({ shoppingCart }) {
+  const prices = shoppingCart.map((p) => {
+    return p.realPrice * p.selectedQuantity;
   });
   const reducer = (accumulator, curr) => accumulator + curr;
   const deliveryPrice = 50;
