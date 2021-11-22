@@ -50,13 +50,12 @@ const FoodItem = (props) => {
 
 	//Size method
 	const [
-		size,
-		setSize
-	] = useState('small');
+		storrelse,
+		setStorrelse
+	] = useState('liten');
 
 	const handleSize = (e) => {
-		setSize(e.target.value);
-		console.log(size);
+		setStorrelse(e.target.value);
 	};
 
 	return (
@@ -103,7 +102,7 @@ const FoodItem = (props) => {
 						</Typography>
 						<Grid item style={{ position: 'relative' }}>
 							<Box display={{ fontSize: '12px' }}>
-								<RadioGroup row defaultValue="Liten" name="størrelse" onClick={handleSize}>
+								<RadioGroup row defaultValue="liten" name="størrelse" onClick={handleSize}>
 									<FormControlLabel
 										value="liten"
 										size="small"
@@ -139,7 +138,7 @@ const FoodItem = (props) => {
 							edge="end"
 							size="medium"
 							value={id}
-							onClick={(e) => addToCart(e, quant, size)}
+							onClick={(e) => addToCart(e, quant, storrelse)}
 						>
 							<AddShoppingCartIcon />
 						</IconButton>

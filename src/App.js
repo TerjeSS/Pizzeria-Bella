@@ -16,13 +16,14 @@ function App() {
 		setShoppingCart
 	] = useState([]);
 
-	const addToCart = (e, quant, size) => {
+	const addToCart = (e, quant, storrelse) => {
 		console.log('quant=' + quant);
 		const id = e.currentTarget.getAttribute('value');
 		let tempArray = Products.filter((product) => product.id == id);
 
 		//for å legge inn riktig pris
-		tempArray[0].selectedSize = size;
+		tempArray[0].selectedSize = storrelse;
+		tempArray[0].selectedQuantity = quant;
 		if (tempArray[0].selectedSize === 'liten') {
 			tempArray[0].realPrice = tempArray[0].priceSmall;
 		}
