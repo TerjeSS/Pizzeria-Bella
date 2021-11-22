@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 import { Drawer } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import { ListItem } from "@material-ui/core";
-import { IconButton } from "@mui/material";
+import { Container, IconButton } from "@mui/material";
 import List from "@mui/material/List";
 import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
-
+import TopStyles from "./TopDrawerStyles";
+import CheckoutCard from "../checkoutCard/CheckoutCard";
 const TopDrawer = ({ toggleTopDrawer, handleTopToggle }) => {
+  const styles = TopStyles();
+
   return (
     <div>
       <Drawer
@@ -17,13 +20,24 @@ const TopDrawer = ({ toggleTopDrawer, handleTopToggle }) => {
         open={toggleTopDrawer}
         onClose={handleTopToggle}
       >
-        <Box>TOP SHIT</Box>
-        <Box>TOP SHIT</Box>
-        <Box>TOP SHIT</Box>
-        <Box>TOP SHIT</Box>
-        <Box>TOP SHIT</Box>
-        <Box>TOP SHIT</Box>
-        <Box>TOP SHIT</Box>
+        <Container>
+          <Box>TOP SHIT</Box>
+
+          <Box>
+            <CheckoutCard />
+          </Box>
+          <Box className={styles.wrapper}>
+            <Link style={{ textDecoration: "none" }} to="/checkout">
+              <Button
+                onClick={handleTopToggle}
+                className={styles.btn}
+                variant="contained"
+              >
+                Checkout
+              </Button>
+            </Link>
+          </Box>
+        </Container>
       </Drawer>
     </div>
   );

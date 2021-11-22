@@ -41,10 +41,10 @@ const SideDrawer = ({ toggleDrawer, handleToggle }) => {
           </IconButton>
           <ListItem className={styles.sidebarLinks}>
             <div className={styles.links}>
-              <Link className={styles.link} to="/">
+              <Link onClick={handleToggle} className={styles.link} to="/">
                 Hjem
               </Link>
-              <Link className={styles.link} to="/menu">
+              <Link onClick={handleToggle} className={styles.link} to="/menu">
                 Meny
               </Link>
               <div className={styles.link}>Åpningstider</div>
@@ -54,7 +54,11 @@ const SideDrawer = ({ toggleDrawer, handleToggle }) => {
             </div>
             <div>
               <Link style={{ textDecoration: "none" }} to="/checkout">
-                <Button className={styles.btn} variant="contained">
+                <Button
+                  onClick={handleToggle}
+                  className={styles.btn}
+                  variant="contained"
+                >
                   Checkout
                 </Button>
               </Link>
