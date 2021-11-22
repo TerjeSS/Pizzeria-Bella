@@ -15,15 +15,30 @@ function App() {
 		shoppingCart,
 		setShoppingCart
 	] = useState([]);
-	const addToCart = (e) => {
+
+	const addToCart = (e, quant, size) => {
+		console.log('quant=' + quant);
 		const id = e.currentTarget.getAttribute('value');
 		let tempArray = Products.filter((product) => product.id == id);
-		console.log('temp' + tempArray);
-		setShoppingCart([
-			...shoppingCart,
-			tempArray[0]
-		]);
+
+		//for å legge inn riktig pris
+		tempArray[0].selectedSize = size;
+		if (tempArray[0].selectedSize === 'liten') {
+			tempArray[0].realPrice = tempArray[0].priceSmall;
+		}
+		else if (tempArray[0].selectedSize === 'stor') {
+			tempArray[0].realPrice = tempArray[0].priceLarge;
+		}
+
+		setShoppingCart((prevState) => {
+			return [
+				...prevState,
+				tempArray[0]
+			];
+		});
+
 		console.log(shoppingCart);
+		console.log(shoppingCart[0] === shoppingCart[1]);
 	};
 
 	const [
@@ -38,17 +53,11 @@ function App() {
 
 			<Routes>
 				<Route path="/" element={<LandingPage />} />
-				<Route path="/checkout" element={<CheckoutPage />} />
+				<Route path="/checkout" element={<CheckoutPage shoppingCart={shoppingCart} />} />
 				<Route
 					path="/menu"
 					element={
-						<MenuPage
-							shoppingCart={shoppingCart}
-							setShoppingCart={setShoppingCart}
-							addToCart={addToCart}
-							quantity={quantity}
-							setQuantity={setQuantity}
-						/>
+						<MenuPage shoppingCart={shoppingCart} setShoppingCart={setShoppingCart} addToCart={addToCart} />
 					}
 				/>
 				<Route path="/login" element={<Login />} />

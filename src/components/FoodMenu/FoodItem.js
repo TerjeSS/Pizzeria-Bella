@@ -34,7 +34,10 @@ const FoodItem = (props) => {
 		setQuantity
 	} = props;
 
-	//State for antall å adde
+	const [
+		quant,
+		setQuant
+	] = useState(1);
 
 	//funksjon for å utvide kortet med riktig state.
 	const dotsClicked = () => {
@@ -44,6 +47,17 @@ const FoodItem = (props) => {
 		expanded,
 		setExpanded
 	] = useState(false);
+
+	//Size method
+	const [
+		size,
+		setSize
+	] = useState('small');
+
+	const handleSize = (e) => {
+		setSize(e.target.value);
+		console.log(size);
+	};
 
 	return (
 		<Grid item xs={12} sm={12} lg={6}>
@@ -89,16 +103,16 @@ const FoodItem = (props) => {
 						</Typography>
 						<Grid item style={{ position: 'relative' }}>
 							<Box display={{ fontSize: '12px' }}>
-								<RadioGroup row defaultValue="Liten" name="størrelse">
+								<RadioGroup row defaultValue="Liten" name="størrelse" onClick={handleSize}>
 									<FormControlLabel
-										value="Liten"
+										value="liten"
 										size="small"
 										label={`Liten: ${priceSmall},-`}
 										control={<Radio />}
 									/>
 									<FormControlLabel
 										style={{ fontSize: '10px' }}
-										value="Stor"
+										value="stor"
 										size="small"
 										control={<Radio />}
 										label={`Stor: ${priceLarge},-`}
@@ -125,13 +139,13 @@ const FoodItem = (props) => {
 							edge="end"
 							size="medium"
 							value={id}
-							onClick={(e) => addToCart(e)}
+							onClick={(e) => addToCart(e, quant, size)}
 						>
 							<AddShoppingCartIcon />
 						</IconButton>
 						<IconButton style={{ padding: '0', marginRight: '1px' }} edge="end" size="large">
 							{expanded ? (
-								<Quantity quantity={quantity} setQuantity={setQuantity} />
+								<Quantity quant={quant} setQuant={setQuant} />
 							) : (
 								<MoreHorizIcon onClick={dotsClicked} style={{ marginTop: '34px' }} />
 							)}
