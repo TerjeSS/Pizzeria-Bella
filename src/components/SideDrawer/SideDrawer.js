@@ -16,13 +16,13 @@ const SideDrawer = ({ toggleDrawer, handleToggle }) => {
   return (
     <div>
       <Drawer
-        style={{ borderRadius: "20px 0 0 20px !important" }}
+        style={{ width: "100%" }}
         variant="temporary"
         anchor={"right"}
         open={toggleDrawer}
         onClose={handleToggle}
       >
-        <Box className={styles.sidebarWrapper}>
+        <div className={styles.sidebarWrapper}>
           <IconButton
             className={styles.close}
             style={{
@@ -61,7 +61,7 @@ const SideDrawer = ({ toggleDrawer, handleToggle }) => {
             </div>
           </ListItem>
           <ListItem></ListItem>
-        </Box>
+        </div>
       </Drawer>
     </div>
   );

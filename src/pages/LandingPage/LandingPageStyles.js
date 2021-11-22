@@ -21,7 +21,7 @@ const LandingPageStyles = makeStyles({
       bottom: "0",
       right: "0",
 
-      backgroundColor: "rgba(153,39,39, 0.1)",
+      backgroundColor: "rgba(255,255,255, 0.1)",
       display: "block",
       borderRadius: "20px",
     },
@@ -47,7 +47,7 @@ const LandingPageStyles = makeStyles({
       bottom: "0",
       right: "0",
 
-      backgroundColor: "rgba(39,82,153, 0.3)",
+      backgroundColor: "rgba(255,255,153, 0.3)",
       display: "block",
       borderRadius: "20px",
     },
@@ -55,7 +55,7 @@ const LandingPageStyles = makeStyles({
 
   line: {
     height: "1.3px",
-    background: "#515151",
+    background: "#fff",
     display: "block",
     width: "100px",
     margin: "auto",

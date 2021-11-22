@@ -7,10 +7,13 @@ import { fontWeight } from "@mui/system";
 const Footer = () => {
   const style = FooterStyles();
   return (
-    <Box className={style.footer}>
+    <Box
+      style={{ boxShadow: "rgb(0 0 0 / 50%) 0px 1px 5px 1px inset" }}
+      className={style.footer}
+    >
       <Container>
         <Grid container spacing={5}>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} lg={4} sm={4}>
             <Typography
               className={style.footerh1}
               gutterBottom
