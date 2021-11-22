@@ -1,6 +1,7 @@
 const Products = [
 	{
 		name        : 'Dolce Vita',
+		id          : 1,
 		priceSmall  : 160,
 		priceLarge  : 220,
 		ingredients :
@@ -13,9 +14,11 @@ const Products = [
 	},
 	{
 		name        : 'Figaro',
+		id          : 2,
 		priceSmall  : 160,
 		priceLarge  : 220,
-		ingredients : 'Kylling, sopp, rødløk, paprika',
+		ingredients :
+			'Kylling, sopp, rødløk, paprika. Laget med ferske saftige bifftomater, og vår kjente hjemmelagde saus',
 		allergens   : 'hvete',
 		image       :
 			'https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80',
@@ -24,9 +27,11 @@ const Products = [
 	},
 	{
 		name        : 'Paganini',
+		id          : 3,
 		priceSmall  : 160,
 		priceLarge  : 220,
-		ingredients : 'Parmaskinke, pesto, gorgonzola',
+		ingredients :
+			'Parmaskinke, pesto, gorgonzola. Laget med ferske tomater, og vår kjente hjemmelagde saus. Kokkens favoritt.',
 		allergens   : 'hvete og melk',
 		image       :
 			'https://images.unsplash.com/photo-1618213837799-25d5552820d3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1142&q=80',
@@ -35,6 +40,7 @@ const Products = [
 	},
 	{
 		name        : 'Fellini',
+		id          : 4,
 		priceSmall  : 160,
 		priceLarge  : 220,
 		ingredients :
@@ -46,6 +52,7 @@ const Products = [
 	},
 	{
 		name        : 'Diavola',
+		id          : 5,
 		priceSmall  : 160,
 		priceLarge  : 220,
 		ingredients : 'Salami, oliven, chili',
@@ -56,6 +63,7 @@ const Products = [
 	},
 	{
 		name        : 'Carbonara',
+		id          : 6,
 		priceSmall  : 99,
 		priceLarge  : 149,
 		ingredients : 'Tagliatelle, bacon, egg, parmeggiano',
@@ -66,6 +74,7 @@ const Products = [
 	},
 	{
 		name        : 'Bolognese',
+		id          : 7,
 		priceSmall  : 99,
 		priceLarge  : 149,
 		ingredients : 'Penne, storfekjøtt, løk',
@@ -76,6 +85,7 @@ const Products = [
 	},
 	{
 		name        : 'Lasagne',
+		id          : 8,
 		priceSmall  : 99,
 		priceLarge  : 149,
 		ingredients : 'Kjøttdeig, ost, løk, hvitløk',
@@ -86,6 +96,7 @@ const Products = [
 	},
 	{
 		name        : 'Coca cola',
+		id          : 9,
 		priceSmall  : 29,
 		priceLarge  : 35,
 		ingredients : '',
@@ -94,6 +105,7 @@ const Products = [
 	},
 	{
 		name        : 'pepsi',
+		id          : 10,
 		priceSmall  : 29,
 		priceLarge  : 35,
 		ingredients : '',
