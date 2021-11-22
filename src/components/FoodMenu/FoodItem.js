@@ -57,11 +57,12 @@ const FoodItem = (props) => {
 					justifyContent  : 'space-between',
 					borderRadius    : '20px',
 					border          : '1px solid black',
-					backgroundColor : '#E9EDF0'
+					backgroundColor : '#E9EDF0',
+					maxHeight       : '250px'
 				}}
 			>
 				<Grid container direction="row" style={{}} alignItems="center">
-					<Grid item xs={3} md={2} style={{ height: '100%', marginRight: '11px' }} onClick={dotsClicked}>
+					<Grid item xs={3} md={3} style={{ height: '100%', marginRight: '11px' }} onClick={dotsClicked}>
 						<img src={image} alt={name} width="100%" height="100%" style={{ objectFit: 'cover' }} />
 					</Grid>
 					<Grid
@@ -79,7 +80,7 @@ const FoodItem = (props) => {
 							{name}
 						</Typography>
 						<Typography style={{ fontSize: '13px' }} onClick={dotsClicked}>
-							{expanded ? ingredients : `${ingredients.substring(0, 33)}...`}
+							{expanded ? ingredients : `${ingredients.substring(0, 25)}...`}
 						</Typography>
 						<Grid item style={{ position: 'relative' }}>
 							<Box display={{ fontSize: '12px' }}>
@@ -103,7 +104,7 @@ const FoodItem = (props) => {
 					</Grid>
 					<Grid
 						item
-						xs
+						xs={1}
 						style={{
 							display        : 'flex',
 							flexDirection  : 'column',
