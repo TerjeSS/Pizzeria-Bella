@@ -10,8 +10,9 @@ import SideDrawer from "../SideDrawer/SideDrawer";
 import TopDrawer from "../TopDrawer/TopDrawer";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const styles = useStyles();
+  const {shoppingCart} = props
 
   const [toggleTopDrawer, setToggleTopDrawer] = useState(false);
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -35,6 +36,7 @@ const Navbar = () => {
       <TopDrawer
         toggleTopDrawer={toggleTopDrawer}
         handleTopToggle={handleTopToggle}
+        shoppingCart={shoppingCart}
       />
       <SideDrawer toggleDrawer={toggleDrawer} handleToggle={handleToggle} />
       <AppBar
