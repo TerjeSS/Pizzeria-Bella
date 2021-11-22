@@ -16,12 +16,13 @@ const SideDrawer = ({ toggleDrawer, handleToggle }) => {
   return (
     <div>
       <Drawer
+        style={{ width: "100%" }}
         variant="temporary"
         anchor={"right"}
         open={toggleDrawer}
         onClose={handleToggle}
       >
-        <Box className={styles.sidebarWrapper}>
+        <div className={styles.sidebarWrapper}>
           <IconButton
             className={styles.close}
             style={{
@@ -39,21 +40,28 @@ const SideDrawer = ({ toggleDrawer, handleToggle }) => {
             <CloseIcon onClick={handleToggle} />
           </IconButton>
           <ListItem className={styles.sidebarLinks}>
-            <Link className={styles.link} to="/">
-              Hjem
-            </Link>
-            <Link className={styles.link} to="/menu">
-              Meny
-            </Link>
+            <div className={styles.links}>
+              <Link className={styles.link} to="/">
+                Hjem
+              </Link>
+              <Link className={styles.link} to="/menu">
+                Meny
+              </Link>
+              <div className={styles.link}>Åpningstider</div>
+              <div className={styles.link}>Kontakt</div>
+              <div className={styles.link}>Om oss</div>
+              <div className={styles.link}>Min side</div>
+            </div>
+            <div>
+              <Link style={{ textDecoration: "none" }} to="/checkout">
+                <Button className={styles.btn} variant="contained">
+                  Checkout
+                </Button>
+              </Link>
+            </div>
           </ListItem>
-          <ListItem>
-            <Link style={{ textDecoration: "none" }} to="/checkout">
-              <Button className={styles.btn} variant="contained">
-                Checkout
-              </Button>
-            </Link>
-          </ListItem>
-        </Box>
+          <ListItem></ListItem>
+        </div>
       </Drawer>
     </div>
   );

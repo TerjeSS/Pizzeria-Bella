@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import useStyles from "../../materialStyles";
 import SideDrawer from "../SideDrawer/SideDrawer";
 import TopDrawer from "../TopDrawer/TopDrawer";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const styles = useStyles();
@@ -56,6 +57,7 @@ const Navbar = () => {
             >
               <ShoppingCartIcon onClick={handleTopToggle} />
             </IconButton>
+
             <Typography
               variant="h6"
               component="div"
@@ -66,11 +68,14 @@ const Navbar = () => {
                 justifyContent: "center",
                 fontSize: "14px",
                 color: "#515151",
+                marginRight: "10px",
+                cursor: "pointer",
               }}
             >
-              Logg inn
+              <Link to="/login"> Logg inn</Link>
               <LoginIcon />
             </Typography>
+
             <IconButton
               style={{ color: "#515151" }}
               component="div"

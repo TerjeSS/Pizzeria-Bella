@@ -17,6 +17,7 @@ const useStyles = makeStyles({
   global: {
     marginTop: "10vh",
     textAlign: "center",
+    padding: "0",
   },
   foodItemImage: {
     backgroundImage: "url(https://unsplash.com/photos/PKH_tWEGuPA)",
