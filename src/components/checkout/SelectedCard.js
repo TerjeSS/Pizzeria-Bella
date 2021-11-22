@@ -28,10 +28,21 @@ export default function SelectedCard(props) {
     const newArray = shoppingCart.filter(
       (product) => product.uniqe != removeid
     );
-    console.log(e.currentTarget.getAttribute("removeid"));
-
     setShoppingCart([...newArray]);
     console.log(newArray);
+  };
+
+  const handleAddClick = (e) => {
+    const productId = e.currentTarget.getAttribute("uniqueID");
+    const index = shoppingCart.indexOf(productId);
+
+    const newArray = shoppingCart.filter(
+      (product) => product.uniqe == productId
+    );
+    // newArray[0].selectedQuantity += 1;
+    const newQuantity = { ...newArray[0] };
+    console.log(shoppingCart.indexOf(newQuantity));
+    setShoppingCart([...shoppingCart, newQuantity]);
   };
 
   return (
@@ -64,11 +75,20 @@ export default function SelectedCard(props) {
                 <img src={milkImg} className={style.pngIcon} />
               </Box>
               <Box className={style.rowBox}>
-                <IconButton aria-label="add" size="small">
+                <IconButton
+                  aria-label="add"
+                  size="small"
+                  uniqueID={product.uniqe}
+                  onClick={handleAddClick}
+                >
                   <AddCircleOutlineIcon />
                 </IconButton>
                 <Typography>{product.selectedQuantity}</Typography>
-                <IconButton aria-label="add" size="small">
+                <IconButton
+                  aria-label="add"
+                  size="small"
+                  uniqueID={product.uniqe}
+                >
                   <RemoveCircleOutlineIcon />
                 </IconButton>
               </Box>
