@@ -15,6 +15,7 @@ function App() {
 		shoppingCart,
 		setShoppingCart
 	] = useState([]);
+
 	const addToCart = (e) => {
 		const id = e.currentTarget.getAttribute('value');
 		let tempArray = Products.filter((product) => product.id == id);
@@ -38,7 +39,7 @@ function App() {
 
 			<Routes>
 				<Route path="/" element={<LandingPage />} />
-				<Route path="/checkout" element={<CheckoutPage />} />
+				<Route path="/checkout" element={<CheckoutPage shoppingCart={shoppingCart} />} />
 				<Route
 					path="/menu"
 					element={
