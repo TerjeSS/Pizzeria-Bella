@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SelectedCardStyle from "./SelectedCardStyle";
 // material ui components:
 import {
@@ -24,18 +24,20 @@ export default function SelectedCard(props) {
   const { shoppingCart, setShoppingCart } = props;
 
   const removeItem = (e) => {
+    const removeid = e.currentTarget.getAttribute("removeid");
     const newArray = shoppingCart.filter(
-      (product) =>
-        product.selectedSize !== e.currentTarget.getAttribute("selectedSize") &&
-        product.id !== e.currentTarget.getAttribute("i")
+      (product) => product.uniqe != removeid
     );
+    console.log(e.currentTarget.getAttribute("removeid"));
+
     setShoppingCart([...newArray]);
+    console.log(newArray);
   };
 
   return (
     <Grid container spacing={3}>
       {shoppingCart.map((product) => (
-        <Grid item key={product} xs={12} sm={12} md={6} lg={6}>
+        <Grid item key={product.uniqe} xs={12} sm={12} md={6} lg={6}>
           <Card
             className={style.card}
             style={{ backgroundColor: "#E9EDF0", borderRadius: "5%" }}
@@ -74,8 +76,7 @@ export default function SelectedCard(props) {
             <Box className={style.delete}>
               <IconButton
                 aria-label="delete"
-                i={product.id}
-                selectedSize={product.selectedSize}
+                removeid={product.uniqe}
                 onClick={removeItem}
               >
                 <img src={trashImg} className={style.deleteIcon} />

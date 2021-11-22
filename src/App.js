@@ -12,8 +12,12 @@ import { useState } from "react";
 function App() {
   //Attempt nr1 for AddToCart
   const [shoppingCart, setShoppingCart] = useState([]);
+  const [count, setCount] = useState(0);
 
   const addToCart = (e, quant, storrelse) => {
+    setCount((prev) => {
+      return prev + 1;
+    });
     console.log("quant=" + quant);
     const id = e.currentTarget.getAttribute("value");
     let tempArray = Products.filter((product) => product.id == id);
@@ -27,6 +31,7 @@ function App() {
       tempArray[0].realPrice = tempArray[0].priceLarge;
     }
     const newItem = { ...tempArray[0] };
+    newItem.uniqe = count;
 
     const exists = shoppingCart.find((item) => item.id === tempArray[0].id);
 
