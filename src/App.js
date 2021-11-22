@@ -29,16 +29,16 @@ function App() {
 		else if (tempArray[0].selectedSize === 'stor') {
 			tempArray[0].realPrice = tempArray[0].priceLarge;
 		}
+		const newItem = { ...tempArray[0] };
 
 		setShoppingCart((prevState) => {
 			return [
 				...prevState,
-				tempArray[0]
+				newItem
 			];
 		});
 
 		console.log(shoppingCart);
-		console.log(shoppingCart[0] === shoppingCart[1]);
 	};
 
 	const [
