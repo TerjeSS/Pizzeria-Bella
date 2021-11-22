@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   const styles = useStyles();
-  const {shoppingCart} = props
+  const { shoppingCart, count } = props;
 
   const [toggleTopDrawer, setToggleTopDrawer] = useState(false);
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -58,6 +58,7 @@ const Navbar = (props) => {
               aria-label="menu"
             >
               <ShoppingCartIcon onClick={handleTopToggle} />
+              <span>({count})</span>
             </IconButton>
 
             <Typography
