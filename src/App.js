@@ -16,14 +16,19 @@ function App() {
 		setShoppingCart
 	] = useState([]);
 
-	const addToCart = (e) => {
+	const addToCart = (e, quant) => {
+		console.log('quant=' + quant);
 		const id = e.currentTarget.getAttribute('value');
 		let tempArray = Products.filter((product) => product.id == id);
-		console.log('temp' + tempArray);
-		setShoppingCart([
-			...shoppingCart,
-			tempArray[0]
-		]);
+
+		for (let i = 0; i < quant; i++) {
+			setShoppingCart((prev) => {
+				return [
+					...prev,
+					tempArray[0]
+				];
+			});
+		}
 		console.log(shoppingCart);
 	};
 

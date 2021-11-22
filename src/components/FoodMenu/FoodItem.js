@@ -34,7 +34,10 @@ const FoodItem = (props) => {
 		setQuantity
 	} = props;
 
-	//State for antall å adde
+	const [
+		quant,
+		setQuant
+	] = useState(0);
 
 	//funksjon for å utvide kortet med riktig state.
 	const dotsClicked = () => {
@@ -125,13 +128,13 @@ const FoodItem = (props) => {
 							edge="end"
 							size="medium"
 							value={id}
-							onClick={(e) => addToCart(e)}
+							onClick={(e) => addToCart(e, quant)}
 						>
 							<AddShoppingCartIcon />
 						</IconButton>
 						<IconButton style={{ padding: '0', marginRight: '1px' }} edge="end" size="large">
 							{expanded ? (
-								<Quantity quantity={quantity} setQuantity={setQuantity} />
+								<Quantity quant={quant} setQuant={setQuant} />
 							) : (
 								<MoreHorizIcon onClick={dotsClicked} style={{ marginTop: '34px' }} />
 							)}
