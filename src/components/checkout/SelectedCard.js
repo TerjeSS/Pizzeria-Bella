@@ -25,7 +25,7 @@ export default function SelectedCard(props) {
 							<Typography gutterBottom variant="h6">
 								{product.name}
 							</Typography>
-							<Typography variant="subtitle2">Pris: {product.price};</Typography>
+							<Typography variant="subtitle2">Pris: {product.realPrice};</Typography>
 						</CardContent>
 
 						<Box className={style.columnBox}>

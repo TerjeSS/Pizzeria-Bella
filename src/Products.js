@@ -5,6 +5,7 @@ const Products = [
 		priceSmall       : 160,
 		priceLarge       : 220,
 		selectedSize     : '',
+		realPrice        : 0,
 		selectedQuantity : 0,
 		ingredients      :
 			'Biffstrimler, cherrytomat, avocado. Laget med ferske tomater, og vår kjente hjemmelagde saus. Allergener: Hvete',
