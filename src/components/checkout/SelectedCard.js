@@ -38,7 +38,7 @@ export default function SelectedCard(props) {
 								<IconButton aria-label="add" size="small">
 									<AddCircleOutlineIcon />
 								</IconButton>
-								<Typography>1</Typography>
+								<Typography>{product.selectedQuantity}</Typography>
 								<IconButton aria-label="add" size="small">
 									<RemoveCircleOutlineIcon />
 								</IconButton>

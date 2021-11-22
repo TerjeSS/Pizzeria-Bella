@@ -16,17 +16,20 @@ const Products = [
 		category         : 'pizza'
 	},
 	{
-		name        : 'Figaro',
-		id          : 2,
-		priceSmall  : 160,
-		priceLarge  : 220,
-		ingredients :
+		name             : 'Figaro',
+		id               : 2,
+		priceSmall       : 160,
+		priceLarge       : 220,
+		selectedSize     : '',
+		realPrice        : 0,
+		selectedQuantity : 0,
+		ingredients      :
 			'Kylling, sopp, rødløk, paprika. Laget med ferske saftige bifftomater, og vår kjente hjemmelagde saus. Allergener: Hvete',
-		allergens   : 'hvete',
-		image       :
+		allergens        : 'hvete',
+		image            :
 			'https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80',
-		description : 'Laget med ferske tomater, og vår kjente hjemmelagde saus',
-		category    : 'pizza'
+		description      : 'Laget med ferske tomater, og vår kjente hjemmelagde saus',
+		category         : 'pizza'
 	},
 	{
 		name        : 'Paganini',
