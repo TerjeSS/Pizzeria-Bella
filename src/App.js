@@ -34,7 +34,7 @@ function App() {
 	return (
 		<div>
 			<GlobalStyles />
-			<Navbar />
+			<Navbar shoppingCart={shoppingCart} />
 
 			<Routes>
 				<Route path="/" element={<LandingPage />} />

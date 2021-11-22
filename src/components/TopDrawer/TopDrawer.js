@@ -8,8 +8,8 @@ import List from '@mui/material/List';
 import Box from '@mui/material/Box';
 import CloseIcon from '@mui/icons-material/Close';
 import TopStyles from './TopDrawerStyles';
-//import CheckoutCard from "../checkoutCard/CheckoutCard";
-const TopDrawer = ({ toggleTopDrawer, handleTopToggle }) => {
+import SelectedCard from '../checkout/SelectedCard';
+const TopDrawer = ({ toggleTopDrawer, handleTopToggle, shoppingCart }) => {
 	const styles = TopStyles();
 
 	return (
@@ -19,7 +19,7 @@ const TopDrawer = ({ toggleTopDrawer, handleTopToggle }) => {
 					<Box>TOP SHIT</Box>
 
 					<Box>
-						<CheckoutCard />
+						<SelectedCard shoppingCart={shoppingCart} />
 					</Box>
 					<Box className={styles.wrapper}>
 						<Link style={{ textDecoration: 'none' }} to="/checkout">
