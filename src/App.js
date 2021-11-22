@@ -60,7 +60,12 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route
           path="/checkout"
-          element={<CheckoutPage shoppingCart={shoppingCart} />}
+          element={
+            <CheckoutPage
+              shoppingCart={shoppingCart}
+              setShoppingCart={setShoppingCart}
+            />
+          }
         />
         <Route
           path="/menu"

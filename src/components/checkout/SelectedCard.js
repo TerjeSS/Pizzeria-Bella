@@ -17,10 +17,20 @@ import glutenImg from "./img/gluten.png";
 import milkImg from "./img/milk-bottle.png";
 import soyaImg from "./img/soya.png";
 import trashImg from "./img/trash.png";
+import Products from "../../Products";
 
 export default function SelectedCard(props) {
   const style = SelectedCardStyle();
-  const { shoppingCart } = props;
+  const { shoppingCart, setShoppingCart } = props;
+
+  const removeItem = (e) => {
+    const newArray = shoppingCart.filter(
+      (product) =>
+        product.selectedSize !== e.currentTarget.getAttribute("selectedSize") &&
+        product.id !== e.currentTarget.getAttribute("i")
+    );
+    setShoppingCart([...newArray]);
+  };
 
   return (
     <Grid container spacing={3}>
@@ -62,7 +72,12 @@ export default function SelectedCard(props) {
               </Box>
             </Box>
             <Box className={style.delete}>
-              <IconButton aria-label="delete">
+              <IconButton
+                aria-label="delete"
+                i={product.id}
+                selectedSize={product.selectedSize}
+                onClick={removeItem}
+              >
                 <img src={trashImg} className={style.deleteIcon} />
               </IconButton>
             </Box>

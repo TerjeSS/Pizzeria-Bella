@@ -6,9 +6,8 @@ import { Container } from "@mui/material";
 import SelectedProducts from "../../SelectedProducts";
 import Payment from "../../components/checkout/Payment";
 
-const CheckoutPage = ({ shoppingCart }) => {
+const CheckoutPage = ({ shoppingCart, setShoppingCart }) => {
   const styles = useStyles();
-  const { products } = SelectedProducts; // dummy values
   return (
     <Container
       className={styles.global}
@@ -19,7 +18,10 @@ const CheckoutPage = ({ shoppingCart }) => {
       }}
     >
       <h1>Selected Items</h1>
-      <SelectedCard shoppingCart={shoppingCart} />
+      <SelectedCard
+        shoppingCart={shoppingCart}
+        setShoppingCart={setShoppingCart}
+      />
       <Delivery shoppingCart={shoppingCart} />
       <Payment />
     </Container>
