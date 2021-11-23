@@ -4,6 +4,7 @@ import { Drawer } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import { ListItem } from "@material-ui/core";
 import { IconButton } from "@mui/material";
+import LoginIcon from "@mui/icons-material/Login";
 import List from "@mui/material/List";
 import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
@@ -48,14 +49,37 @@ const SideDrawer = ({ toggleDrawer, handleToggle }) => {
               <Link onClick={handleToggle} className={styles.link} to="/menu">
                 Meny
               </Link>
-              <div className={styles.link}>Åpningstider</div>
-              <div className={styles.link}>Kontakt</div>
-              <div className={styles.link}>Om oss</div>
-              <div className={styles.link}>Min side</div>
+              <Link
+                onClick={handleToggle}
+                className={styles.link}
+                to="/review"
+                className={styles.link}
+              >
+                Andmeldelser
+              </Link>
+              <Link
+                onClick={handleToggle}
+                className={styles.link}
+                to="/offer"
+                className={styles.link}
+              >
+                Ukens tilbud
+              </Link>
             </div>
-            <div>
+            <div style={{ width: "100%" }}>
+              <Link style={{ textDecoration: "none" }} to="/login">
+                <Button
+                  style={{ width: "100%" }}
+                  onClick={handleToggle}
+                  variant="outlined"
+                >
+                  Logg inn
+                  <LoginIcon />
+                </Button>
+              </Link>
               <Link style={{ textDecoration: "none" }} to="/checkout">
                 <Button
+                  style={{ width: "100%", marginTop: "20px" }}
                   onClick={handleToggle}
                   className={styles.btn}
                   variant="contained"

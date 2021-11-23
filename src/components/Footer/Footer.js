@@ -16,8 +16,14 @@ const Footer = () => {
       className={style.footer}
     >
       <Container>
-        <Grid container>
-          <Grid item xs={12} lg={4} sm={4}>
+        <Grid
+          container
+          direction="row"
+          alignContent="center"
+          justifyContent="center"
+          spacing={3}
+        >
+          <Grid item xs={12} lg={4}>
             <Typography
               className={style.footerh1}
               gutterBottom
@@ -35,15 +41,23 @@ const Footer = () => {
             <Typography gutterBottom variant="subtitle2">
               Adresse: pizzaveien 3 2053 Oslo
             </Typography>
+          </Grid>
+
+          <Grid item xs={12} lg={4}>
             <Typography
               className={style.footerh1}
               gutterBottom
               variant="h5"
               component="h1"
             >
-              Sosial media
+              Sosiale medier
             </Typography>
-            <IconButton size="medium" edge="start" aria-label="menu">
+            <IconButton
+              style={{ padding: "0" }}
+              size="medium"
+              edge="start"
+              aria-label="social media"
+            >
               <LinkedInIcon
                 style={{
                   padding: "0",
@@ -53,7 +67,12 @@ const Footer = () => {
                 }}
               />
             </IconButton>
-            <IconButton size="medium" edge="start" aria-label="menu">
+            <IconButton
+              style={{ padding: "0" }}
+              size="medium"
+              edge="start"
+              aria-label="social media"
+            >
               <FacebookIcon
                 style={{
                   color: "#4267B2",
@@ -62,7 +81,12 @@ const Footer = () => {
                 }}
               />
             </IconButton>
-            <IconButton size="medium" edge="start" aria-label="menu">
+            <IconButton
+              style={{ padding: "0" }}
+              size="medium"
+              edge="start"
+              aria-label="social media"
+            >
               <TwitterIcon
                 style={{
                   color: "rgb(25, 118, 210)",
@@ -71,7 +95,12 @@ const Footer = () => {
                 }}
               />
             </IconButton>
-            <IconButton size="small" edge="start" aria-label="menu">
+            <IconButton
+              style={{ padding: "0" }}
+              size="medium"
+              edge="start"
+              aria-label="social media"
+            >
               <InstagramIcon
                 style={{
                   background:
@@ -80,7 +109,8 @@ const Footer = () => {
                 }}
               />
             </IconButton>
-
+          </Grid>
+          <Grid item xs={12} lg={4}>
             <Typography
               className={style.footerh1}
               gutterBottom

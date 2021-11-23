@@ -8,6 +8,9 @@ import GlobalStyles from "./GlobalStyles";
 import Login from "./pages/Login/Login";
 import Products from "./Products";
 import { useState } from "react";
+import Review from "./pages/Review/Review";
+import ScrollTop from "./components/ScrollTop";
+import Offer from "./pages/Offer/Offer";
 
 function App() {
   //Attempt nr1 for AddToCart
@@ -47,7 +50,9 @@ function App() {
     const exists = shoppingCart.find((item) => item.id === tempArray[0].id);
 
     const equalSize = shoppingCart.find(
-      (item) => item.selectedSize === tempArray[0].selectedSize
+      (item) =>
+        item.selectedSize === tempArray[0].selectedSize &&
+        item.id === tempArray[0].id
     );
     if (exists && equalSize) {
       shoppingCart.map((item) =>
@@ -75,7 +80,7 @@ function App() {
         count={count}
         shoppingCart={shoppingCart}
       />
-
+      <ScrollTop />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route
@@ -102,6 +107,8 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/offer" element={<Offer />} />
       </Routes>
       <Footer />
     </div>
