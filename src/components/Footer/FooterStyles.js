@@ -6,13 +6,11 @@ const FooterStyles = makeStyles({
     color: "#fff",
     marginTop: "52px",
     padding: "20px 0",
+    margin: "auto",
     minHeight: "300px",
-  },
-
-  container: {
-    "@media(minWidth: 780px)": {
-      background: "red",
-    },
+    textAlign: "start",
+    display: "flex",
+    justifyContent: "space-between",
   },
 
   footerh1: {
