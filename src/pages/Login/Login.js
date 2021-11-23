@@ -18,15 +18,17 @@ const Login = () => {
         style={{
           borderRadius: "10px",
           border: "1px solid #fff",
-          padding: "20px",
-          boxShadow:
-            "rgba(0, 0, 0, 0.5) 0px 2px 8px -2px, rgba(0, 0, 0, 0.08) 1px 0px 2px 1px",
         }}
       >
         Logg inn er under utvikling. Følg med!
       </div>
-      <Link to="/">
-        <Button variant="contained">Tilbake til forsiden</Button>
+      <Link style={{ textDecoration: "none" }} to="/">
+        <Button
+          style={{ background: "#0F2841", color: "#fff" }}
+          variant="contained"
+        >
+          Tilbake til forsiden
+        </Button>
       </Link>
     </div>
   );

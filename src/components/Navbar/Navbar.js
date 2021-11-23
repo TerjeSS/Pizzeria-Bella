@@ -77,7 +77,17 @@ const Navbar = (props) => {
                 cursor: "pointer",
               }}
             >
-              <Link to="/login"> Logg inn</Link>
+              <Link
+                style={{
+                  color: "#515151",
+                  textDecoration: "none",
+                  fontFamily: "poppins",
+                }}
+                to="/login"
+              >
+                {" "}
+                Logg inn
+              </Link>
               <LoginIcon />
             </Typography>
 
