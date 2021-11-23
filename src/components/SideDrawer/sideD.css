@@ -1,0 +1,10 @@
+@media (min-width: 501px) {
+  #sidebarWrapper {
+    width: 200px;
+  }
+}
+@media (max-width: 500px) {
+  #sidebarWrapper {
+    width: 55vw;
+  }
+}
