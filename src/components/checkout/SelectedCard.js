@@ -56,7 +56,7 @@ export default function SelectedCard(props) {
     <>
       <Grid container spacing={3}>
         {shoppingCart.map((product) => (
-          <Grid item key={product.uniqe} xs={12} sm={12} md={6} lg={6}>
+          <Grid item key={product.uniqe} xs={12} sm={12} md={6} lg={4}>
             <Card
               className={style.card}
               style={{ backgroundColor: "#E9EDF0", borderRadius: "5%" }}
@@ -67,8 +67,19 @@ export default function SelectedCard(props) {
                 title="Image title"
               />
 
-              <CardContent className={style.cardContent} style={{maxWidth: "99px", minWidth: "99px", textAlign: "left"}}>
-                <Typography gutterBottom variant="h6" style={{fontSize: "16px"}}>
+              <CardContent
+                className={style.cardContent}
+                style={{
+                  maxWidth: "99px",
+                  minWidth: "99px",
+                  textAlign: "left",
+                }}
+              >
+                <Typography
+                  gutterBottom
+                  variant="h6"
+                  style={{ fontSize: "16px" }}
+                >
                   {product.name}
                 </Typography>
                 <Typography variant="subtitle2">
