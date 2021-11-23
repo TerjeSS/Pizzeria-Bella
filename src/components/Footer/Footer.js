@@ -16,8 +16,14 @@ const Footer = () => {
       className={style.footer}
     >
       <Container>
-        <Grid container>
-          <Grid item xs={12} lg={4} sm={4}>
+        <Grid
+          container
+          direction="row"
+          alignContent="center"
+          justifyContent="center"
+          spacing={3}
+        >
+          <Grid item xs={12} lg={4}>
             <Typography
               className={style.footerh1}
               gutterBottom
@@ -35,6 +41,9 @@ const Footer = () => {
             <Typography gutterBottom variant="subtitle2">
               Adresse: pizzaveien 3 2053 Oslo
             </Typography>
+          </Grid>
+
+          <Grid item xs={12} lg={4}>
             <Typography
               className={style.footerh1}
               gutterBottom
@@ -80,7 +89,8 @@ const Footer = () => {
                 }}
               />
             </IconButton>
-
+          </Grid>
+          <Grid item xs={12} lg={4}>
             <Typography
               className={style.footerh1}
               gutterBottom

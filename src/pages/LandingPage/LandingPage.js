@@ -3,13 +3,11 @@ import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 import pizza from "../../img/pizza1.jpg";
 import carbonara from "../../img/carbonara.jpg";
-import spaghetti from "../../img/spaghetti.jpg";
+import spaghetti from "../../img/spaghetti2.jpg";
 import { Link } from "react-router-dom";
 import LandingPageStyles from "./LandingPageStyles";
 import { Container } from "@material-ui/core";
 
-//svgs
-import slice from "../../img/slice.svg";
 const LandingPage = () => {
   const styles = LandingPageStyles();
 
@@ -62,27 +60,29 @@ const LandingPage = () => {
             Ukens tilbud
           </h1>
         </div>
-        <div className={styles.imgWrapper}>
-          <img
-            src={carbonara}
-            style={{
-              objectFit: "cover",
-              width: "100%",
-              height: "100%",
-              borderRadius: "20px",
-            }}
-            alt="bowl of spaghetti"
-          />
-          <h1
-            style={{
-              position: "absolute",
-              color: "#fff",
-              top: "60px",
-            }}
-          >
-            Favoritt
-          </h1>
-        </div>
+        <Link to="/review">
+          <div className={styles.imgWrapper}>
+            <img
+              src={carbonara}
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+                borderRadius: "20px",
+              }}
+              alt="bowl of spaghetti"
+            />
+            <h1
+              style={{
+                position: "absolute",
+                color: "#fff",
+                top: "60px",
+              }}
+            >
+              Anmeldelser
+            </h1>
+          </div>
+        </Link>
       </Box>
     </Container>
   );

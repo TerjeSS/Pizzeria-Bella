@@ -35,7 +35,7 @@ const MenuPage = (props) => {
   );
 
   return (
-    <Container>
+    <Container style={{ marginTop: "100px" }}>
       <Box component="form" style={{ marginTop: "40px" }}>
         <TextField
           fullWidth
@@ -78,7 +78,7 @@ const MenuPage = (props) => {
           onClose={closeMessage}
           message="Varen er lagt til"
           action={action}
-        /> 
+        />
       </div>
     </Container>
   );
