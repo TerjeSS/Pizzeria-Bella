@@ -14,12 +14,15 @@ function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [count, setCount] = useState(0);
   const [message, setMessage] = useState(false);
-
+  const [areThereItems, setAreThereItems] = useState(false);
   const closeMessage = () => {
     setMessage(false);
   };
 
   const addToCart = (e, quant, storrelse) => {
+    setAreThereItems((prevAreThereItems) => {
+      return !prevAreThereItems;
+    });
     setMessage((prevMessage) => {
       return !prevMessage;
     });
@@ -67,7 +70,11 @@ function App() {
   return (
     <div>
       <GlobalStyles />
-      <Navbar count={count} shoppingCart={shoppingCart} />
+      <Navbar
+        areThereItems={areThereItems}
+        count={count}
+        shoppingCart={shoppingCart}
+      />
 
       <Routes>
         <Route path="/" element={<LandingPage />} />

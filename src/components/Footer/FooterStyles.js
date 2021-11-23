@@ -5,6 +5,7 @@ const FooterStyles = makeStyles({
     backgroundColor: "#0F2841",
     color: "#fff",
     marginTop: "52px",
+    padding: "20px 0",
   },
 
   footerh1: {
