@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 const SelectedCardStyle = makeStyles((theme) => ({
   card: {
     margin: "10px",
-    height: "100px",
+    height: "100%",
     minWidth: "300px",
     display: "flex",
     border: "1px solid #0F2841",
