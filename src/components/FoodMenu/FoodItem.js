@@ -95,12 +95,21 @@ const FoodItem = (props) => {
               component="h5"
               variant="h5"
               onClick={dotsClicked}
-              style={{ margin: "5px 0 0 10px" }}
+              style={{
+                margin: "5px 0 0 10px",
+                fontWeight: "400",
+                fontFamily: "poppins",
+              }}
             >
               {name}
             </Typography>
             <Typography
-              style={{ fontSize: "16px", margin: "10px", lineHeight: "1.8" }}
+              style={{
+                fontSize: "16px",
+                margin: "10px",
+                lineHeight: "1.8",
+                fontFamily: "poppins",
+              }}
               onClick={dotsClicked}
             >
               {expanded ? ingredients : `${ingredients.substring(0, 25)}...`}
