@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
 
 import sideDrawerStyles from "./sideDrawerStyles";
+import "../SideDrawer/sideD.css";
 
 const SideDrawer = ({ toggleDrawer, handleToggle }) => {
   const styles = sideDrawerStyles();
@@ -22,7 +23,7 @@ const SideDrawer = ({ toggleDrawer, handleToggle }) => {
         open={toggleDrawer}
         onClose={handleToggle}
       >
-        <div className={styles.sidebarWrapper}>
+        <div id="sidebarWrapper" className={styles.sidebarWrapper}>
           <IconButton
             className={styles.close}
             style={{

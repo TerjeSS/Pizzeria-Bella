@@ -23,7 +23,7 @@ const MenuPage = (props) => {
     setSearchValue(event.target.value);
   };
   const filteredProducts = Products.filter((product) => {
-    return product.name.includes(searchValue);
+    return product.name.toLowerCase().includes(searchValue.toLowerCase());
   });
 
   const action = (

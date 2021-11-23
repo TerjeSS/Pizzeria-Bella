@@ -21,9 +21,8 @@ const drawerStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "start",
     height: "100%",
-    width: "100%",
     fontFamily: "Poppins",
-    fontSize: "18px",
+    fontSize: "20px",
   },
   sidebarLinks: {
     display: "flex",

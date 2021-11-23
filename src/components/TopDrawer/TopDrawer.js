@@ -38,6 +38,22 @@ const TopDrawer = ({
             </Box>
           ) : (
             <div>
+              <IconButton
+                className={styles.close}
+                style={{
+                  color: "#515151",
+                  display: "flex",
+                  justifyContent: "end",
+                  margin: "10px 0",
+                  marginRight: "20px",
+                  borderRadius: "none",
+                }}
+                size="medium"
+                edge="end"
+                aria-label="menu"
+              >
+                <CloseIcon onClick={handleTopToggle} />
+              </IconButton>
               <Box>
                 <SelectedCard shoppingCart={shoppingCart} />
               </Box>
