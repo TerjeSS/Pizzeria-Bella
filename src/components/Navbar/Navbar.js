@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   const styles = useStyles();
-  const {shoppingCart} = props
+  const { shoppingCart, count, areThereItems } = props;
 
   const [toggleTopDrawer, setToggleTopDrawer] = useState(false);
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -34,22 +34,24 @@ const Navbar = (props) => {
   return (
     <>
       <TopDrawer
+        areThereItems={areThereItems}
         toggleTopDrawer={toggleTopDrawer}
         handleTopToggle={handleTopToggle}
         shoppingCart={shoppingCart}
       />
       <SideDrawer toggleDrawer={toggleDrawer} handleToggle={handleToggle} />
-      <AppBar
-        style={{
-          backgroundColor: "#fff",
-          boxShadow: "none",
-          position: "fixed",
-          top: "0",
-          zIndex: "1",
-        }}
-        position="static"
-      >
-        <Container maxWidth="lg">
+      <Container maxWidth="lg">
+        <AppBar
+          style={{
+            backgroundColor: "#fff",
+            boxShadow: "none",
+            position: "fixed",
+            top: "0",
+            left: "0",
+            zIndex: "1",
+          }}
+          position="static"
+        >
           <Toolbar sx={{ fontSize: "12px" }}>
             <IconButton
               style={{ color: "#515151" }}
@@ -58,6 +60,7 @@ const Navbar = (props) => {
               aria-label="menu"
             >
               <ShoppingCartIcon onClick={handleTopToggle} />
+              <span>({count})</span>
             </IconButton>
 
             <Typography
@@ -70,7 +73,7 @@ const Navbar = (props) => {
                 justifyContent: "center",
                 fontSize: "14px",
                 color: "#515151",
-                marginRight: "10px",
+
                 cursor: "pointer",
               }}
             >
@@ -88,8 +91,8 @@ const Navbar = (props) => {
               <MenuIcon onClick={handleToggle} />
             </IconButton>
           </Toolbar>
-        </Container>
-      </AppBar>
+        </AppBar>
+      </Container>
     </>
   );
 };

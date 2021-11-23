@@ -13,8 +13,19 @@ function App() {
   //Attempt nr1 for AddToCart
   const [shoppingCart, setShoppingCart] = useState([]);
   const [count, setCount] = useState(0);
+  const [message, setMessage] = useState(false);
+  const [areThereItems, setAreThereItems] = useState(false);
+  const closeMessage = () => {
+    setMessage(false);
+  };
 
   const addToCart = (e, quant, storrelse) => {
+    setAreThereItems((prevAreThereItems) => {
+      return !prevAreThereItems;
+    });
+    setMessage((prevMessage) => {
+      return !prevMessage;
+    });
     setCount((prev) => {
       return prev + 1;
     });
@@ -59,7 +70,11 @@ function App() {
   return (
     <div>
       <GlobalStyles />
-      <Navbar shoppingCart={shoppingCart} />
+      <Navbar
+        areThereItems={areThereItems}
+        count={count}
+        shoppingCart={shoppingCart}
+      />
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -69,6 +84,8 @@ function App() {
             <CheckoutPage
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
+              setCount={setCount}
+              count={count}
             />
           }
         />
@@ -76,6 +93,8 @@ function App() {
           path="/menu"
           element={
             <MenuPage
+              closeMessage={closeMessage}
+              message={message}
               shoppingCart={shoppingCart}
               setShoppingCart={setShoppingCart}
               addToCart={addToCart}

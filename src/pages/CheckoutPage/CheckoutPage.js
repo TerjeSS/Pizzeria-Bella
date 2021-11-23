@@ -6,7 +6,7 @@ import { Container } from "@mui/material";
 import SelectedProducts from "../../SelectedProducts";
 import Payment from "../../components/checkout/Payment";
 
-const CheckoutPage = ({ shoppingCart, setShoppingCart }) => {
+const CheckoutPage = ({ shoppingCart, setShoppingCart, setCount, count }) => {
   const styles = useStyles();
   return (
     <Container
@@ -21,6 +21,8 @@ const CheckoutPage = ({ shoppingCart, setShoppingCart }) => {
       <SelectedCard
         shoppingCart={shoppingCart}
         setShoppingCart={setShoppingCart}
+        setCount={setCount}
+        count={count}
       />
       <Delivery shoppingCart={shoppingCart} />
       <Payment />
