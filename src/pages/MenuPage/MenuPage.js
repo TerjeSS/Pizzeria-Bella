@@ -1,4 +1,4 @@
-import { Container, Grid, Link, TextField } from "@material-ui/core";
+import { Container, Grid, Link, TextField, Button } from "@material-ui/core";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
@@ -71,6 +71,25 @@ const MenuPage = (props) => {
           );
         })}
       </Grid>
+      <Link href="checkout">
+        <Button
+          variant="contained"
+          style={{
+            display: "flex",
+            width: "50vw",
+            maxWidth: "600px",
+            margin: "20px 0 10px 0",
+            backgroundColor: "#0F2841",
+            color: "#fff",
+            padding: "20px 30px",
+            margin: "40px auto",
+            fontSize: "70px",
+            fontWeight: "bold",
+          }}
+        >
+          Go To Checkout
+        </Button>
+      </Link>
       <div>
         <Snackbar
           open={message}
