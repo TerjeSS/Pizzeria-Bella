@@ -67,7 +67,7 @@ export default function SelectedCard(props) {
                 title="Image title"
               />
 
-              <CardContent className={style.cardContent} style={{maxWidth: "99px", minWidth: "99px"}}>
+              <CardContent className={style.cardContent} style={{maxWidth: "99px", minWidth: "99px", textAlign: "left"}}>
                 <Typography gutterBottom variant="h6" style={{fontSize: "16px"}}>
                   {product.name}
                 </Typography>
