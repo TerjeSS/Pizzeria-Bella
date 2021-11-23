@@ -16,20 +16,30 @@ export default function HomeDelivery({ shoppingCart }) {
           margin: "20px 0",
         }}
       >
-        <Typography variant="h6">Leveringstid: </Typography>
-        <Typography variant="h6">Ca 45 min </Typography>
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="h6"
+        >
+          Leveringstid:{" "}
+        </Typography>
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="h6"
+        >
+          Ca 45 min{" "}
+        </Typography>
       </Box>
 
       <Box>
         <TextField
-          style={{ width: "100%", margin: "5px 0" }}
+          style={{ width: "100%", margin: "5px 0", fontFamily: "poppins" }}
           id="outlined-basic"
           label="Navn"
           variant="outlined"
           size="small"
         />
         <TextField
-          style={{ width: "100%", margin: "5px 0" }}
+          style={{ width: "100%", margin: "5px 0", fontFamily: "poppins" }}
           id="outlined-basic"
           label="Adresse"
           variant="outlined"
@@ -37,7 +47,7 @@ export default function HomeDelivery({ shoppingCart }) {
           required
         />
         <TextField
-          style={{ width: "100%", margin: "5px 0" }}
+          style={{ width: "100%", margin: "5px 0", fontFamily: "poppins" }}
           id="outlined-basic"
           label="Telefon"
           variant="outlined"
@@ -53,8 +63,16 @@ export default function HomeDelivery({ shoppingCart }) {
           margin: "20px 0",
         }}
       >
-        <Typography variant="subtitle1">Varer: </Typography>
-        <Typography variant="subtitle1">
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="subtitle1"
+        >
+          Varer:{" "}
+        </Typography>
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="subtitle1"
+        >
           {prices.reduce(reducer)} kr{" "}
         </Typography>
       </Box>
@@ -65,8 +83,18 @@ export default function HomeDelivery({ shoppingCart }) {
           margin: "20px 0",
         }}
       >
-        <Typography variant="subtitle1">Levering: </Typography>
-        <Typography variant="subtitle1">{deliveryPrice} kr </Typography>
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="subtitle1"
+        >
+          Levering:{" "}
+        </Typography>
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="subtitle1"
+        >
+          {deliveryPrice} kr{" "}
+        </Typography>
       </Box>
 
       <Box
@@ -76,8 +104,16 @@ export default function HomeDelivery({ shoppingCart }) {
           margin: "20px 0",
         }}
       >
-        <Typography variant="h4">Total: </Typography>
-        <Typography variant="h4">
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="h4"
+        >
+          Total:{" "}
+        </Typography>
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="h4"
+        >
           {prices.reduce(reducer) + deliveryPrice} kr
         </Typography>
       </Box>
