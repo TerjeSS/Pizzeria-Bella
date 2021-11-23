@@ -67,16 +67,16 @@ export default function SelectedCard(props) {
                 title="Image title"
               />
 
-              <CardContent className={style.cardContent}>
-                <Typography gutterBottom variant="h6">
+              <CardContent className={style.cardContent} style={{maxWidth: "99px", minWidth: "99px"}}>
+                <Typography gutterBottom variant="h6" style={{fontSize: "16px"}}>
                   {product.name}
                 </Typography>
                 <Typography variant="subtitle2">
-                  Pris: {product.realPrice * product.selectedQuantity} ;
+                  Pris: {product.realPrice * product.selectedQuantity},-
                 </Typography>
               </CardContent>
 
-              <Box className={style.columnBox}>
+              <Box className={style.columnBox} id="test">
                 <Box>
                   <img src={glutenImg} className={style.pngIcon} />
                   <img src={soyaImg} className={style.pngIcon} />
