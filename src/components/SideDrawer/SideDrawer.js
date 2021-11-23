@@ -9,7 +9,7 @@ import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
 
 import sideDrawerStyles from "./sideDrawerStyles";
-import "/Users/sigmund/Library/Mobile Documents/com~apple~CloudDocs/Documents/kristiania 2021H/Grensesnittdesign/Pizzeria-Bella/src/components/SideDrawer/sideD.css";
+import "../SideDrawer/sideD.css";
 
 const SideDrawer = ({ toggleDrawer, handleToggle }) => {
   const styles = sideDrawerStyles();
