@@ -78,7 +78,7 @@ const MenuPage = (props) => {
           onClose={closeMessage}
           message="Varen er lagt til"
           action={action}
-        />
+        /> 
       </div>
     </Container>
   );
