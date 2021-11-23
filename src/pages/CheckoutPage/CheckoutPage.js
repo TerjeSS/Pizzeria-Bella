@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import useStyles from "../../materialStyles";
 import SelectedCard from "../../components/checkout/SelectedCard";
 import Delivery from "../../components/checkout/Delivery";
 import { Container } from "@mui/material";
-import SelectedProducts from "../../SelectedProducts";
 import Payment from "../../components/checkout/Payment";
 
 const CheckoutPage = ({ shoppingCart, setShoppingCart, setCount, count }) => {

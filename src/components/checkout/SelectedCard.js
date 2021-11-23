@@ -20,7 +20,6 @@ import glutenImg from "./img/gluten.png";
 import milkImg from "./img/milk-bottle.png";
 import soyaImg from "./img/soya.png";
 import trashImg from "./img/trash.png";
-import Products from "../../Products";
 
 export default function SelectedCard(props) {
   const [removeMessage, setRemoveMessage] = useState(false);
