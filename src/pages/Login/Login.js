@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
 
 const Login = () => {
   return (
@@ -22,9 +23,11 @@ const Login = () => {
             "rgba(0, 0, 0, 0.5) 0px 2px 8px -2px, rgba(0, 0, 0, 0.08) 1px 0px 2px 1px",
         }}
       >
-        Login page is under development
+        Logg inn er under utvikling. Følg med!
       </div>
-      <Link to="/">Return to front page</Link>
+      <Link to="/">
+        <Button variant="contained">Tilbake til forsiden</Button>
+      </Link>
     </div>
   );
 };

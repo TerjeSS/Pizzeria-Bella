@@ -2,7 +2,11 @@ import React from "react";
 import FooterStyles from "./FooterStyles";
 import Box from "@material-ui/core/Box";
 import { Container, Grid, Typography } from "@material-ui/core";
-import { fontWeight } from "@mui/system";
+import { IconButton } from "@material-ui/core";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
   const style = FooterStyles();
@@ -12,7 +16,7 @@ const Footer = () => {
       className={style.footer}
     >
       <Container>
-        <Grid container spacing={5}>
+        <Grid container>
           <Grid item xs={12} lg={4} sm={4}>
             <Typography
               className={style.footerh1}
@@ -31,6 +35,52 @@ const Footer = () => {
             <Typography gutterBottom variant="subtitle2">
               Adresse: pizzaveien 3 2053 Oslo
             </Typography>
+            <Typography
+              className={style.footerh1}
+              gutterBottom
+              variant="h5"
+              component="h1"
+            >
+              Sosial media
+            </Typography>
+            <IconButton size="medium" edge="start" aria-label="menu">
+              <LinkedInIcon
+                style={{
+                  padding: "0",
+                  color: "rgb(25, 118, 210)",
+                  background: "#fff",
+                  borderRadius: "50%",
+                }}
+              />
+            </IconButton>
+            <IconButton size="medium" edge="start" aria-label="menu">
+              <FacebookIcon
+                style={{
+                  color: "#4267B2",
+                  background: "#fff",
+                  borderRadius: "50%",
+                }}
+              />
+            </IconButton>
+            <IconButton size="medium" edge="start" aria-label="menu">
+              <TwitterIcon
+                style={{
+                  color: "rgb(25, 118, 210)",
+                  background: "#fff",
+                  borderRadius: "50%",
+                }}
+              />
+            </IconButton>
+            <IconButton size="small" edge="start" aria-label="menu">
+              <InstagramIcon
+                style={{
+                  background:
+                    "linear-gradient(to right bottom, #515BD4, #8134AF, #DD2A7B, #FEDA77,  #F58529)",
+                  borderRadius: "50%",
+                }}
+              />
+            </IconButton>
+
             <Typography
               className={style.footerh1}
               gutterBottom
