@@ -90,7 +90,14 @@ function App() {
 	return (
 		<div>
 			<GlobalStyles />
-			<Navbar areThereItems={areThereItems} count={count} shoppingCart={shoppingCart} />
+			<Navbar
+				areThereItems={areThereItems}
+				count={count}
+				shoppingCart={shoppingCart}
+				setShoppingCart={setShoppingCart}
+				setCount={setCount}
+				count={count}
+			/>
 
 			<Routes>
 				<Route path="/" element={<LandingPage />} />

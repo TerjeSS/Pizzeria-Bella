@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   const styles = useStyles();
-  const { shoppingCart, count, areThereItems } = props;
+  const { shoppingCart, setShoppingCart, setCount, count, areThereItems } = props;
 
   const [toggleTopDrawer, setToggleTopDrawer] = useState(false);
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -38,6 +38,9 @@ const Navbar = (props) => {
         toggleTopDrawer={toggleTopDrawer}
         handleTopToggle={handleTopToggle}
         shoppingCart={shoppingCart}
+        setShoppingCart={setShoppingCart}
+        setCount={setCount}
+        count={count}
       />
       <SideDrawer toggleDrawer={toggleDrawer} handleToggle={handleToggle} />
       <Container maxWidth="lg">
