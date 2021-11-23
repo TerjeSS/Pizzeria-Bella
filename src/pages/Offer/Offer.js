@@ -65,7 +65,11 @@ const Offer = () => {
                   alignItems: "center",
                 }}
               >
-                <img style={{ width: "100%" }} src={item.image} alt="" />
+                <img
+                  style={{ width: "100%", borderRadius: "10px" }}
+                  src={item.image}
+                  alt=""
+                />
               </div>
               <h2>{item.name}</h2>
               <p>⭐⭐⭐⭐⭐</p>
