@@ -21,7 +21,7 @@ function App() {
 
   const addToCart = (e, quant, storrelse) => {
     setAreThereItems((prevAreThereItems) => {
-      return !prevAreThereItems;
+      return true;
     });
     setMessage((prevMessage) => {
       return !prevMessage;
