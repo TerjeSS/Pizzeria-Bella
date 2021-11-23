@@ -57,7 +57,7 @@ const Navbar = (props) => {
               style={{ color: "#515151" }}
               size="medium"
               edge="start"
-              aria-label="menu"
+              aria-label="shoptingcart"
             >
               <ShoppingCartIcon onClick={handleTopToggle} />
               <span>({count})</span>
@@ -73,22 +73,10 @@ const Navbar = (props) => {
                 justifyContent: "center",
                 fontSize: "14px",
                 color: "#515151",
-
                 cursor: "pointer",
               }}
             >
-              <Link
-                style={{
-                  color: "#515151",
-                  textDecoration: "none",
-                  fontFamily: "poppins",
-                }}
-                to="/login"
-              >
-                {" "}
-                Logg inn
-              </Link>
-              <LoginIcon />
+              Bella pizza
             </Typography>
 
             <IconButton

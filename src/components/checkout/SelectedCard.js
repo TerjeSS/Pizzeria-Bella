@@ -59,7 +59,7 @@ export default function SelectedCard(props) {
           <Grid item key={product.uniqe} xs={12} sm={12} md={6} lg={6}>
             <Card
               className={style.card}
-              style={{ backgroundColor: "#E9EDF0", borderRadius: "5%" }}
+              style={{ backgroundColor: "#E9EDF0", borderRadius: "10px" }}
             >
               <CardMedia
                 className={style.cardMedia}
