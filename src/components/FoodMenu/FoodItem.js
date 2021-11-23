@@ -50,7 +50,7 @@ const FoodItem = (props) => {
   };
 
   return (
-    <Grid item xs={12} sm={12} lg={4}>
+    <Grid item xs={12} sm={12} md={6} lg={4}>
       <Card
         style={{
           display: "flex",
@@ -100,7 +100,7 @@ const FoodItem = (props) => {
               {name}
             </Typography>
             <Typography
-              style={{ fontSize: "13px", margin: "10px" }}
+              style={{ fontSize: "16px", margin: "10px", lineHeight: "1.8" }}
               onClick={dotsClicked}
             >
               {expanded ? ingredients : `${ingredients.substring(0, 25)}...`}
@@ -146,7 +146,7 @@ const FoodItem = (props) => {
             <IconButton
               style={{ padding: "0", marginRight: "1px", marginTop: "30px" }}
               edge="end"
-              size="medium"
+              size="large"
               value={id}
               onClick={(e) => addToCart(e, quant, storrelse)}
             >

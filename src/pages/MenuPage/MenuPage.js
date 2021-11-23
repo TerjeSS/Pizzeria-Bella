@@ -1,4 +1,4 @@
-import { Container, Grid, Link, TextField, Button } from "@material-ui/core";
+import { Container, Grid, TextField, Button } from "@material-ui/core";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
@@ -6,6 +6,7 @@ import FoodItem from "../../components/FoodMenu/FoodItem";
 import Products from "../../Products";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import { Link } from "react-router-dom";
 const MenuPage = (props) => {
   const {
     shoppingCart,
@@ -51,11 +52,11 @@ const MenuPage = (props) => {
         component="h5"
         style={{ display: "flex", justifyContent: "space-between" }}
       >
-        <Link href="#">Pizza</Link>
-        <Link href="#">Pizzaaa</Link>
-        <Link href="#">Tilbehør</Link>
-        <Link href="#">Drikke</Link>
-        <Link href="#">Dessert</Link>
+        <Link to="#">Pizza</Link>
+        <Link to="#">Pizzaaa</Link>
+        <Link to="#">Tilbehør</Link>
+        <Link to="#">Drikke</Link>
+        <Link to="#">Dessert</Link>
       </Box>
       <Grid container spacing="3">
         {filteredProducts.map((object) => {
@@ -71,7 +72,7 @@ const MenuPage = (props) => {
           );
         })}
       </Grid>
-      <Link href="checkout">
+      <Link to="/checkout" style={{ textDecoration: "none" }}>
         <Button
           variant="contained"
           style={{
