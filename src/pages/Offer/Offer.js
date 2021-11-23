@@ -1,5 +1,6 @@
 import { Container } from "@material-ui/core";
 import React from "react";
+import { Button } from "@material-ui/core";
 
 const product = [
   {
@@ -36,7 +37,7 @@ const Offer = () => {
   return (
     <Container style={{ marginTop: "100px" }}>
       <div style={{ textAlign: "center" }}>
-        <h1>Dagens Tilbud</h1>
+        <h1>Ukens deal</h1>
       </div>
       <div>
         {product.map((item) => {
@@ -66,7 +67,8 @@ const Offer = () => {
               >
                 <img style={{ width: "100%" }} src={item.image} alt="" />
               </div>
-              <h4>{item.name}</h4>
+              <h2>{item.name}</h2>
+              <p>⭐⭐⭐⭐⭐</p>
               <div
                 style={{
                   display: "flex",
