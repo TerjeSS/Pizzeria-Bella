@@ -30,7 +30,7 @@ const SelectedCardStyle = makeStyles((theme) => ({
     height: "18px",
   },
   deleteIcon: {
-    height: "38px",
+    width: "28px",
   },
 })); // returns an object that contains all the styles
 

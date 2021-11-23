@@ -1,36 +1,45 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import { Button, Container } from "@material-ui/core";
 
 const Login = () => {
   return (
-    <div
-      style={{
-        width: "100wv",
-        height: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
+    <Container>
       <div
         style={{
-          borderRadius: "10px",
-          border: "1px solid #fff",
+          width: "100wv",
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
         }}
       >
-        Logg inn er under utvikling. Følg med!
-      </div>
-      <Link style={{ textDecoration: "none" }} to="/">
-        <Button
-          style={{ background: "#0F2841", color: "#fff" }}
-          variant="contained"
+        <div
+          style={{
+            borderRadius: "10px",
+            border: "1px solid #fff",
+            fontFamily: "poppins",
+            marginBottom: "20px",
+            textAlign: "center",
+          }}
         >
-          Tilbake til forsiden
-        </Button>
-      </Link>
-    </div>
+          Logg inn funksjon under utvikling. Følg med!
+        </div>
+        <Link style={{ textDecoration: "none" }} to="/">
+          <Button
+            style={{
+              background: "#0F2841",
+              color: "#fff",
+              fontFamily: "poppins",
+            }}
+            variant="contained"
+          >
+            Tilbake til forsiden
+          </Button>
+        </Link>
+      </div>
+    </Container>
   );
 };
 

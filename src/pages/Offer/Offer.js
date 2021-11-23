@@ -38,7 +38,7 @@ const Offer = () => {
   return (
     <Container style={{ marginTop: "100px" }}>
       <div style={{ textAlign: "center" }}>
-        <h1>Kampanjer</h1>
+        <h2 style={{ fontFamily: "poppins", fontWeight: "400" }}>Kampanjer</h2>
       </div>
       <div>
         {product.map((item) => {

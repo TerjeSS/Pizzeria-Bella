@@ -28,7 +28,9 @@ const Review = () => {
   return (
     <Container className="container">
       <div className="wrapper">
-        <h1>Anmeldelser</h1>
+        <h2 style={{ fontFamily: "poppins", fontWeight: "400" }}>
+          Anmeldelser
+        </h2>
         <img src={cook} style={{ width: "100px" }} alt="" />
       </div>
       <div>
@@ -43,6 +45,8 @@ const Review = () => {
                 boxShadow:
                   "rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px",
                 background: "#E9EDF0",
+                fontFamily: "poppins",
+                fontWeight: "400",
               }}
             >
               <h4>Navn: {item.name}</h4>

@@ -78,11 +78,18 @@ export default function SelectedCard(props) {
                 <Typography
                   gutterBottom
                   variant="h6"
-                  style={{ fontSize: "16px" }}
+                  style={{
+                    fontSize: "16px",
+                    fontFamily: "poppins",
+                    fontWeight: "400",
+                  }}
                 >
                   {product.name}
                 </Typography>
-                <Typography variant="subtitle2">
+                <Typography
+                  style={{ fontFamily: "poppins", fontSize: "12px" }}
+                  variant="subtitle2"
+                >
                   Pris: {product.realPrice * product.selectedQuantity},-
                 </Typography>
               </CardContent>

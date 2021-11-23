@@ -15,8 +15,18 @@ export default function PickUp({ shoppingCart }) {
           margin: "20px 0",
         }}
       >
-        <Typography variant="h6">Tilberedningstid: </Typography>
-        <Typography variant="h6">Ca 25 min </Typography>
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="h6"
+        >
+          Tilberedningstid:{" "}
+        </Typography>
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="h6"
+        >
+          Ca 25 min{" "}
+        </Typography>
       </Box>
 
       <Box>
@@ -44,8 +54,18 @@ export default function PickUp({ shoppingCart }) {
           margin: "20px 0",
         }}
       >
-        <Typography variant="h4">Total: </Typography>
-        <Typography variant="h4">{prices.reduce(reducer)} kr</Typography>
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="h4"
+        >
+          Total:{" "}
+        </Typography>
+        <Typography
+          style={{ fontFamily: "poppins", color: "#515151" }}
+          variant="h4"
+        >
+          {prices.reduce(reducer)} kr
+        </Typography>
       </Box>
     </div>
   );

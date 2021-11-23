@@ -48,6 +48,7 @@ export default function PayVisa({ handleCheckoutMessage }) {
           margin: "5px 0",
           width: "70%",
           backgroundColor: "#f4f4f4",
+          fontFamily: "poppins",
         }}
         required
         id="outlined-basic"
@@ -62,6 +63,7 @@ export default function PayVisa({ handleCheckoutMessage }) {
           margin: "20px 0 10px 0",
           backgroundColor: "#0F2841",
           padding: "10px 30px",
+          fontFamily: "poppins",
         }}
       >
         Checkout

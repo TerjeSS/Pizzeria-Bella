@@ -77,10 +77,19 @@ export default function Payment() {
               borderRadius: "10px",
             }}
           >
-            <Typography id="modal-modal-title" variant="h6" component="h2">
+            <Typography
+              style={{ fontFamily: "poppins", color: "#515151" }}
+              id="modal-modal-title"
+              variant="h6"
+              component="h2"
+            >
               Takk for handelen
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            <Typography
+              style={{ fontFamily: "poppins", color: "#515151" }}
+              id="modal-modal-description"
+              sx={{ mt: 2 }}
+            >
               Maten vil være klar så fort som mulig. <br />
               <DeliveryDiningIcon />
               <br />

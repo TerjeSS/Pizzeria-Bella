@@ -99,6 +99,7 @@ const FoodItem = (props) => {
                 margin: "5px 0 0 10px",
                 fontWeight: "400",
                 fontFamily: "poppins",
+                color: "#515151",
               }}
             >
               {name}
@@ -109,6 +110,7 @@ const FoodItem = (props) => {
                 margin: "10px",
                 lineHeight: "1.8",
                 fontFamily: "poppins",
+                color: "#515151",
               }}
               onClick={dotsClicked}
             >
@@ -129,7 +131,7 @@ const FoodItem = (props) => {
                     control={<Radio />}
                   />
                   <FormControlLabel
-                    style={{ fontSize: "10px" }}
+                    style={{ fontSize: "1px" }}
                     value="stor"
                     size="small"
                     control={<Radio />}
@@ -163,7 +165,9 @@ const FoodItem = (props) => {
               value={id}
               onClick={(e) => addToCart(e, quant, storrelse)}
             >
-              <AddShoppingCartIcon style={{ fontSize: "36px" }} />
+              <AddShoppingCartIcon
+                style={{ fontSize: "36px", color: "#515151" }}
+              />
             </IconButton>
             <IconButton
               style={{ padding: "0", marginRight: "1px" }}

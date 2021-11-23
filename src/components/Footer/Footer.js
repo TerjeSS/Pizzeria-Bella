@@ -32,13 +32,25 @@ const Footer = () => {
             >
               Kontakt info
             </Typography>
-            <Typography gutterBottom variant="subtitle2">
+            <Typography
+              style={{ fontFamily: "poppins" }}
+              gutterBottom
+              variant="subtitle2"
+            >
               E-post: Italieno@norsk.no
             </Typography>
-            <Typography gutterBottom variant="subtitle2">
+            <Typography
+              style={{ fontFamily: "poppins" }}
+              gutterBottom
+              variant="subtitle2"
+            >
               Tlf: 58 23 52 53
             </Typography>
-            <Typography gutterBottom variant="subtitle2">
+            <Typography
+              style={{ fontFamily: "poppins" }}
+              gutterBottom
+              variant="subtitle2"
+            >
               Adresse: pizzaveien 3 2053 Oslo
             </Typography>
           </Grid>
@@ -119,10 +131,18 @@ const Footer = () => {
             >
               Åpningstider
             </Typography>
-            <Typography gutterBottom variant="subtitle2">
+            <Typography
+              style={{ fontFamily: "poppins" }}
+              gutterBottom
+              variant="subtitle2"
+            >
               Man-fre: 11:00 - 22:00
             </Typography>
-            <Typography gutterBottom variant="subtitle2">
+            <Typography
+              style={{ fontFamily: "poppins" }}
+              gutterBottom
+              variant="subtitle2"
+            >
               Lør-søn: 12:00 - 21:00
             </Typography>
           </Grid>

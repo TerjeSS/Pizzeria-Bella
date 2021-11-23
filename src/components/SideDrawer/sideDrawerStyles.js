@@ -62,6 +62,7 @@ const drawerStyles = makeStyles({
   links: {
     display: "flex",
     flexDirection: "column",
+    width: "100%",
   },
 });
 

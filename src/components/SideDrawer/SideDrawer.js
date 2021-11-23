@@ -55,7 +55,7 @@ const SideDrawer = ({ toggleDrawer, handleToggle }) => {
                 to="/review"
                 className={styles.link}
               >
-                Andmeldelser
+                Anmeldelser
               </Link>
               <Link
                 onClick={handleToggle}
@@ -63,13 +63,13 @@ const SideDrawer = ({ toggleDrawer, handleToggle }) => {
                 to="/offer"
                 className={styles.link}
               >
-                Ukens tilbud
+                Kampanjer
               </Link>
             </div>
             <div style={{ width: "100%" }}>
               <Link style={{ textDecoration: "none" }} to="/login">
                 <Button
-                  style={{ width: "100%" }}
+                  style={{ width: "100%", fontFamily: "poppins" }}
                   onClick={handleToggle}
                   variant="outlined"
                 >
@@ -79,7 +79,11 @@ const SideDrawer = ({ toggleDrawer, handleToggle }) => {
               </Link>
               <Link style={{ textDecoration: "none" }} to="/checkout">
                 <Button
-                  style={{ width: "100%", marginTop: "20px" }}
+                  style={{
+                    width: "100%",
+                    marginTop: "20px",
+                    fontFamily: "poppins",
+                  }}
                   onClick={handleToggle}
                   className={styles.btn}
                   variant="contained"
