@@ -9,10 +9,12 @@ import useStyles from "../../materialStyles";
 import SideDrawer from "../SideDrawer/SideDrawer";
 import TopDrawer from "../TopDrawer/TopDrawer";
 import { Link } from "react-router-dom";
+import slice from "../../img/slice.svg";
 
 const Navbar = (props) => {
   const styles = useStyles();
-  const { shoppingCart, setShoppingCart, setCount, count, areThereItems } = props;
+  const { shoppingCart, setShoppingCart, setCount, count, areThereItems } =
+    props;
 
   const [toggleTopDrawer, setToggleTopDrawer] = useState(false);
   const [toggleDrawer, setToggleDrawer] = useState(false);
@@ -38,9 +40,9 @@ const Navbar = (props) => {
         toggleTopDrawer={toggleTopDrawer}
         handleTopToggle={handleTopToggle}
         shoppingCart={shoppingCart}
-              setShoppingCart={setShoppingCart}
-              setCount={setCount}
-              count={count}
+        setShoppingCart={setShoppingCart}
+        setCount={setCount}
+        count={count}
       />
       <SideDrawer toggleDrawer={toggleDrawer} handleToggle={handleToggle} />
       <Container maxWidth="lg">
@@ -77,9 +79,14 @@ const Navbar = (props) => {
                 fontSize: "14px",
                 color: "#515151",
                 cursor: "pointer",
+                fontWeight: "600",
+                marginRight: "25px",
               }}
             >
-              Bella pizza
+              <Link style={{ textDecoration: "0", color: "#515151" }} to="/">
+                {" "}
+                Bella pizza
+              </Link>
             </Typography>
 
             <IconButton

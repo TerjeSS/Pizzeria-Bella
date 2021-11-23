@@ -52,11 +52,21 @@ const MenuPage = (props) => {
         component="h5"
         style={{ display: "flex", justifyContent: "space-between" }}
       >
-        <Link to="#">Pizza</Link>
-        <Link to="#">Pizzaaa</Link>
-        <Link to="#">Tilbehør</Link>
-        <Link to="#">Drikke</Link>
-        <Link to="#">Dessert</Link>
+        <Link style={{ textDecoration: "none", color: "#515151" }} to="#">
+          Pizza
+        </Link>
+        <Link style={{ textDecoration: "none", color: "#515151" }} to="#">
+          Pasta
+        </Link>
+        <Link style={{ textDecoration: "none", color: "#515151" }} to="#">
+          Tilbehør
+        </Link>
+        <Link style={{ textDecoration: "none", color: "#515151" }} to="#">
+          Drikke
+        </Link>
+        <Link style={{ textDecoration: "none", color: "#515151" }} to="#">
+          Dessert
+        </Link>
       </Box>
       <Grid container spacing="3">
         {filteredProducts.map((object) => {

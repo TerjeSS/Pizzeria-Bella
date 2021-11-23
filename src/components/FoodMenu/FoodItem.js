@@ -144,13 +144,17 @@ const FoodItem = (props) => {
             }}
           >
             <IconButton
-              style={{ padding: "0", marginRight: "1px", marginTop: "30px" }}
+              style={{
+                padding: "0",
+                marginRight: "1px",
+                marginTop: "30px",
+              }}
               edge="end"
               size="large"
               value={id}
               onClick={(e) => addToCart(e, quant, storrelse)}
             >
-              <AddShoppingCartIcon />
+              <AddShoppingCartIcon style={{ fontSize: "36px" }} />
             </IconButton>
             <IconButton
               style={{ padding: "0", marginRight: "1px" }}

@@ -58,7 +58,7 @@ const LandingPage = () => {
                 top: "20px",
               }}
             >
-              Ukens tilbud
+              Kampanjer
             </h1>
           </div>
         </Link>

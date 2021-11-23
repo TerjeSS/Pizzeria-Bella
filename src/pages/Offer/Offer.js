@@ -4,11 +4,11 @@ import { Button } from "@material-ui/core";
 
 const product = [
   {
-    name: "Dolce",
+    name: "Kjøp fem pizza, få en gratis",
     id: 1,
-    priceSmall: 100,
-    priceLarge: 180,
-    selectedSize: "",
+    priceSmall: 160,
+    priceLarge: 220,
+    star: "⭐⭐⭐⭐⭐",
     realPrice: 0,
     selectedQuantity: 0,
     ingredients:
@@ -18,17 +18,18 @@ const product = [
     category: "pizza",
   },
   {
-    name: "Figaro",
+    name: "Studenter får 15% rabatt",
+    nb: "NB! husk studentbevis",
     id: 2,
-    priceSmall: 100,
-    priceLarge: 180,
-    selectedSize: "",
+    priceSmall: 136,
+    priceLarge: 187,
+    star: "",
     realPrice: 0,
     selectedQuantity: 0,
     ingredients:
       "Kylling, sopp, rødløk, paprika. Laget med ferske saftige bifftomater, og vår kjente hjemmelagde saus. Allergener: Hvete",
     image:
-      "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+      "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1949&q=80",
     category: "pizza",
   },
 ];
@@ -37,7 +38,7 @@ const Offer = () => {
   return (
     <Container style={{ marginTop: "100px" }}>
       <div style={{ textAlign: "center" }}>
-        <h1>Ukens deal</h1>
+        <h1>Kampanjer</h1>
       </div>
       <div>
         {product.map((item) => {
@@ -71,8 +72,9 @@ const Offer = () => {
                   alt=""
                 />
               </div>
-              <h2>{item.name}</h2>
-              <p>⭐⭐⭐⭐⭐</p>
+              <h3 style={{ margin: "0", marginTop: "10px" }}>{item.name}</h3>
+              <p style={{ padding: "0", margin: "0" }}>{item.nb}</p>
+              <p>{item.star}</p>
               <div
                 style={{
                   display: "flex",
