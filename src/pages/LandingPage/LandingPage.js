@@ -1,9 +1,9 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
-import pizza from "../../img/pizza2.jpg";
-import pizza2 from "../../img/pizza3.jpg";
-import spaghetti from "../../img/spaghetti2.jpg";
+import pizza from "../../img/pizza1.jpg";
+import carbonara from "../../img/carbonara.jpg";
+import spaghetti from "../../img/spaghetti.jpg";
 import { Link } from "react-router-dom";
 import LandingPageStyles from "./LandingPageStyles";
 import { Container } from "@material-ui/core";
@@ -64,7 +64,7 @@ const LandingPage = () => {
         </div>
         <div className={styles.imgWrapper}>
           <img
-            src={pizza2}
+            src={carbonara}
             style={{
               objectFit: "cover",
               width: "100%",

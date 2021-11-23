@@ -2,7 +2,7 @@ import React from "react";
 import PaymentStyle from "./PaymentStyle";
 import { Box, TextField, Button } from "@mui/material";
 
-export default function PayPayPal() {
+export default function PayPayPal({ handleCheckoutMessage }) {
   const style = PaymentStyle();
 
   return (
@@ -32,6 +32,7 @@ export default function PayPayPal() {
         size="small"
       />
       <Button
+        onClick={handleCheckoutMessage}
         variant="contained"
         style={{
           margin: "20px 0 10px 0",

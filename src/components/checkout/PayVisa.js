@@ -2,7 +2,7 @@ import React from "react";
 import PaymentStyle from "./PaymentStyle";
 import { Box, TextField, Button } from "@mui/material";
 
-export default function PayVisa() {
+export default function PayVisa({ handleCheckoutMessage }) {
   const style = PaymentStyle();
 
   return (
@@ -56,6 +56,7 @@ export default function PayVisa() {
         size="small"
       />
       <Button
+        onClick={handleCheckoutMessage}
         variant="contained"
         style={{
           margin: "20px 0 10px 0",
