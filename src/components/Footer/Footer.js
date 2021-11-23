@@ -50,9 +50,14 @@ const Footer = () => {
               variant="h5"
               component="h1"
             >
-              Sosial media
+              Sosiale medier
             </Typography>
-            <IconButton size="medium" edge="start" aria-label="menu">
+            <IconButton
+              style={{ padding: "0" }}
+              size="medium"
+              edge="start"
+              aria-label="social media"
+            >
               <LinkedInIcon
                 style={{
                   padding: "0",
@@ -62,7 +67,12 @@ const Footer = () => {
                 }}
               />
             </IconButton>
-            <IconButton size="medium" edge="start" aria-label="menu">
+            <IconButton
+              style={{ padding: "0" }}
+              size="medium"
+              edge="start"
+              aria-label="social media"
+            >
               <FacebookIcon
                 style={{
                   color: "#4267B2",
@@ -71,7 +81,12 @@ const Footer = () => {
                 }}
               />
             </IconButton>
-            <IconButton size="medium" edge="start" aria-label="menu">
+            <IconButton
+              style={{ padding: "0" }}
+              size="medium"
+              edge="start"
+              aria-label="social media"
+            >
               <TwitterIcon
                 style={{
                   color: "rgb(25, 118, 210)",
@@ -80,7 +95,12 @@ const Footer = () => {
                 }}
               />
             </IconButton>
-            <IconButton size="small" edge="start" aria-label="menu">
+            <IconButton
+              style={{ padding: "0" }}
+              size="medium"
+              edge="start"
+              aria-label="social media"
+            >
               <InstagramIcon
                 style={{
                   background:

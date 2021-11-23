@@ -10,6 +10,7 @@ import Products from "./Products";
 import { useState } from "react";
 import Review from "./pages/Review/Review";
 import ScrollTop from "./components/ScrollTop";
+import Offer from "./pages/Offer/Offer";
 
 function App() {
   //Attempt nr1 for AddToCart
@@ -107,6 +108,7 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/review" element={<Review />} />
+        <Route path="/offer" element={<Offer />} />
       </Routes>
       <Footer />
     </div>

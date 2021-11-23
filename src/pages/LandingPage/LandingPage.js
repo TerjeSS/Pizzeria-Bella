@@ -39,27 +39,29 @@ const LandingPage = () => {
           </div>
         </Link>
         <div className={styles.line}></div>
-        <div className={styles.imgWrapper2}>
-          <img
-            src={spaghetti}
-            style={{
-              objectFit: "cover",
-              width: "100%",
-              height: "100%",
-              borderRadius: "20px",
-            }}
-            alt="bowl of spaghetti"
-          />
-          <h1
-            style={{
-              position: "absolute",
-              color: "#fff",
-              top: "20px",
-            }}
-          >
-            Ukens tilbud
-          </h1>
-        </div>
+        <Link to="/offer">
+          <div className={styles.imgWrapper2}>
+            <img
+              src={spaghetti}
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+                borderRadius: "20px",
+              }}
+              alt="bowl of spaghetti"
+            />
+            <h1
+              style={{
+                position: "absolute",
+                color: "#fff",
+                top: "20px",
+              }}
+            >
+              Ukens tilbud
+            </h1>
+          </div>
+        </Link>
         <Link to="/review">
           <div className={styles.imgWrapper}>
             <img
