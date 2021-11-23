@@ -72,7 +72,7 @@ const MenuPage = (props) => {
           );
         })}
       </Grid>
-      <Link to="/checkout">
+      <Link to="/checkout" style={{ textDecoration: "none" }}>
         <Button
           variant="contained"
           style={{
